@@ -1,4 +1,4 @@
-# 2022 Bootcamp-Web_Development
+# The Complete 2022 Web Development Bootcamp
 
 - [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/).
 
