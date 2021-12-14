@@ -106,3 +106,51 @@
 - <code>href</code> attribute is the link destination.
 
 </details>
+
+## Section 3:
+
+<details>
+  <summary>Intermediate HTML</summary>
+
+### 3.1. HTML Tables
+
+- Tables main tag is <code>table</code>, and everything between is the actual content.
+- To make row use tag <code>tr</code>.
+- To make cell inside the row use <code>td</code>.
+
+```
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### 3.2. HTML forms
+
+- main form tag is <code>form</code> to define what should go into our form.
+- <code>label</code> tag to some text related to the <code>input</code> element.
+- To use different inputs simply change the <code>type</code> of the <code>input</code> to what is needed.
+- <code>textarea</code> tag to write message.
+- To submit <code>form</code> button use <code>input</code> with <code>type=”submit”</code>.
+
+### 3.3. publish website
+
+- use GitHub to publish free.
+- Make a new repository.
+- Initialize with a readme file.
+- Upload project files
+- Give the version a name and commit.
+- Go to settings -> GitHub pages -> source
+- Change source from none to the main branch.
+- Now the website can be accessed by the internet.
+
+</details>
