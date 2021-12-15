@@ -1,0 +1,50 @@
+/* alphabetical order is an important!! */
+
+/*tag selectors*/
+/*
+
+h1 {
+  color: chartreuse;
+  font-size: 100px;
+}
+
+p {
+  background-color: blue;
+  color: red;
+}
+
+img {
+  background-color: aqua;
+}
+*/
+
+img:hover {
+  /*when select the img then change the color*/
+  background-color: gold;
+}
+
+/*class selectors*/
+
+.bacon {
+  background-color: blue;
+}
+
+.broccoli {
+  background-color: aqua;
+}
+
+.circular {
+  border-radius: 100%;
+}
+
+.p1 {
+  color: red;
+}
+
+/* ID selectors (unique that can identify easily) , more specific as a selector*/
+/*overriding*/
+
+#heading {
+  color: chartreuse;
+  font-size: 100px;
+}
