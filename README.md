@@ -154,3 +154,110 @@
 - Now the website can be accessed by the internet.
 
 </details>
+
+## Section 4:
+
+<details>
+  <summary>Introduction to CSS</summary>
+  
+  ### 4.1. Introduction to css
+  -	CSS: cascading style sheet.
+  -	Styling html.
+
+### 4.2. Inline css
+
+- Going into the tag and change style `attribute = "property:value;"`.
+
+### 4.3. Internal css
+
+- Add <code>style</code> tag inside the <code>head</code> tag.
+- Select element inside <code>style</code> tag.
+- Make styles -> <code>selector {Property : value}</code> .
+
+```
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+</style>
+</head>
+```
+
+- No website is completely unstyled. That means that there is <em>default styles</em> being applied by the browser.
+- <code>hr</code> tag has border style default values.
+- One of the most important role in CSS is to realize that everything in HTML is a box, and the style of these boxes can be affected by changing CSS styles.
+- <code>height</code> property isn’t uniqe.
+- <code>background-color</code> , <code>height</code>, <code>width</code> properties.
+- Change default values to achieve the style needed.
+
+### 4.4. External css
+
+- Add styles in external file.css.
+- <code>link</code> this file to html page at <code>head</code> tag.
+- Anything in html is affected with this external css.
+- This the best way to apply css.
+
+### 4.5. Debug CSS code
+
+- Errors in the console for link href for an external file.
+- Inline styles override the external and internal styles.
+- Internal styles override the external styles.
+
+### 4.6. The Anatomy of CSS syntax
+
+```
+selector {
+  propery: value;
+}
+// who { what: how; }
+```
+
+### 4.7. CSS selectors
+
+- Using tag name.
+
+```
+tagName {
+  propery: value;
+}
+```
+
+- Using class attribute to specify styles for individual <code>html</code> element .
+
+```
+.class{
+  propery: value;
+}
+```
+
+- [Selectors refrence](https://www.w3schools.com/cssref/css_selectors.asp).
+
+### 4.8. CSS Ids
+
+- Using <code>id</code> attribute.
+- We can only have one instance of one particular tag <code>id</code> inside a single page.
+- <code>id</code> can only use in one place.
+- <code>id</code> use to identify one element.
+
+```
+#id {
+  propery: value;
+}
+```
+
+- <code>class</code> can be used for a group of related items.
+- <code>id</code> used to apply specific styles to a single element.
+- Any HTML element can have more than one class.
+- A pseudo-class is used to define a special state of an element
+
+```
+selector:pseudo-class {
+  property: value;
+}
+```
+
+- [Css pseudo classes](https://www.w3schools.com/css/css_pseudo_classes.asp).
+
+</details>
