@@ -8,6 +8,9 @@ h1 {
 
 .top-container {
   background-color: #e4f9f5;
+  width: 200px;
+  width: 200px;
+  border: solid 10px;
 }
 
 .middle-container {
@@ -24,8 +27,4 @@ h1 {
   height: 200px;
   border: solid 10px;
   margin-left: 440px;
-}
-
-.pro {
-  text-decoration: underline;
 }
