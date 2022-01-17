@@ -1,11 +1,22 @@
 body {
   margin: 0;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-  width: 10%;
-  margin: 0 auto 0 auto;
+  font-size: 90px; /* 16px == 100% == 1em*/
+  margin: 50px auto 0 auto;
+  font-family: "Sacramento", cursive;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem; /* == 40px*/
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .top-container {
@@ -15,19 +26,9 @@ h1 {
 }
 
 .middle-container {
-  background-color: red;
-  width: 200px;
-  height: 200px;
-  border: solid 10px;
-  margin-left: 220px;
 }
 
 .bottom-container {
-  background-color: blue;
-  width: 200px;
-  height: 200px;
-  border: solid 10px;
-  margin-left: 440px;
 }
 
 .pro {
@@ -44,4 +45,10 @@ h1 {
   position: absolute;
   right: 300px;
   top: 50px;
+}
+
+.skills {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: monospace;
 }
