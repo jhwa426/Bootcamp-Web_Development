@@ -261,3 +261,11 @@ selector:pseudo-class {
 - [Css pseudo classes](https://www.w3schools.com/css/css_pseudo_classes.asp).
 
 </details>
+
+## Section 5:
+
+<details>
+  <summary>Intermediate CSS</summary>
+  
+  
+</details>
