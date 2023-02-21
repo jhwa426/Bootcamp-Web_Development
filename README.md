@@ -1,7 +1,5 @@
 # The Complete 2023 Web Development Bootcamp
 
-- test
-
 - [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/).
 
 ## Section 1:
