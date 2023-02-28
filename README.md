@@ -267,5 +267,75 @@ selector:pseudo-class {
 <details>
   <summary>Intermediate CSS</summary>
   
-  
+  ### 5.1. What are favicons
+  -	It started as an image that appears when the user adds the site to the favorites list, and now it is an image that appears next to the title of the site page.
+  -	Favicon.com to create the favicon.
+  -	Import it using link tag with `rel=”icon”` inside the head tag.
+  ### 5.2. HTML Divs
+  -	Div is a special HTML element that allows us to divide content into separate containers or boxes.
+  -	It has a height if specify it using style or if it has a content.
+  ### 5.3. Box Model
+  -	Width and height of the element are pushing any other element.
+  -	Border-width make outside border and affect the size of that element.
+  -	Padding makes spaces inside the element and affects the size of that element.
+  -	Margin makes space around elements and pushing them away.
+  -	Inspect in chrome developer tools show box model to customize element.
+  ### 5.4. CSS display property
+  -	block elements take the whole width of the document.
+  -	it doesn't allow another element to set at the same line.
+  -	inline elements take the width of the content only.
+  -	it doesn't allow to change the element width.
+  -	there is an inline-block value, that allows to change width and set elements at the same line.
+  -	`img` element treats as an inline-block.
+  -	none value removes the element from the web page as it didn't exist.
+  -	visibility: hidden -> disappear the element but still exist at the dom.
+  ### 5.5. CSS Static and Relative Positioning
+  -	there are default roles despite any CSS styles.
+    -	first role: content is everything -> content is the first thing that determined how large things get displayed and what the height and width will be.
+    -	second role: the order of elements that comes from HTML code -> how we write code into HTML file is how it be displayed.
+    -	third role: children sit on parents -> that means that child goes on top of the parent(static position).
+  -	To make changes to the order of elements use position property.
+  -	static position is the default position of all HTML elements.
+  -	Relative position it allows us to position element that we select relative to how it would be positioned had it been static.
+  -	coordinates: top, bottom, left, right -> determines we want to move element.
+  -	when move element with relative position it doesn't affect any other thing in the screen.
+  -	it as if the old position is kept and everything else flows around it.
+  -	top with relative make margin top from the static position.
+
+### 5.6. Absolute Positioning
+
+- with absolute positioning we positioning the element relative to it's parent .
+- it is about adding a margin relative to it's parent element.
+- fixed position -> fixs element in it's position relative to the body of the website and it doesn't moves despite scrolling. .
+
+### 5.7. The Dark Art of Centering Elements
+
+- text-align: center -> works with inline and block displayed elements that doesn't have width.
+- margin: auto -> works with elements that have width.
+
+### 5.8. Font Styling in Our Personal Site
+
+- font-family: sans, sans-serif -> main fonts.
+- google fonts to specific font. Link the fonts to html and use it with font-family property.
+
+### 5.9. CSS sizing
+
+- font-size: px -> static size.
+- % to make size dynamic.
+- 100% == 16px
+- 1 em == 16px
+- with % and em font size get inhereted from parent and added to the child.
+- The difference between px and % or em that px doesn't inherte from parent.
+- rem = ignore the parent size(root element), that mean parent size won't affect on the child.
+- to change font color use color propery.
+- font-weight.
+- line-height: number -> number without measuring unit.
+
+### 5.10. CSS float and clear
+
+- float element left or right.
+- float make other elements at the same row.
+-     other elements use clear property to clear float Effect.
+- clear value is anti the float value.
+
 </details>
