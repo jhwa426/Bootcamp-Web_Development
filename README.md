@@ -1,5 +1,11 @@
 # The Complete 2023 Web Development Bootcamp
 
+[![HTML5](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)](https://html.com/)
+[![CSS3](https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge&logo=css3)](https://www.free-css.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)](https://www.javascript.com/)
+[![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=ffffff)](https://git-scm.com/)
+
 - [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/).
 
 ## Section 1:
@@ -337,5 +343,88 @@ selector:pseudo-class {
 - float make other elements at the same row.
 -     other elements use clear property to clear float Effect.
 - clear value is anti the float value.
+
+</details>
+
+## Section 6:
+
+<details>
+  <summary>Introduction to Bootstrap</summary>
+  
+  ### 6.1. What is Bootstrap?
+  -	Bootstrap is a front-end library, It's a free open source.
+  -	front-end is whatever the user sees.
+  -	backend determine how everything is going to work.
+  -	Responsive means that it response to the view port.
+
+### 6.2. Installing Bootstrap
+
+- copy bootstap cdn -> the simplest way.
+- cdn -> stands for content delivery network.
+- the concept is instead of hosting website in single location, you have hole bunch of points where that website can be accessed, it looks for the shortest location that website can be delivered.
+- when browser reachs cdn link it looks for the shortest root to download bootstrap files if the user doesn't download it.
+- when it dowloaded broweser cashes files and doesn't need to redownload it.
+
+  ```
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <title>Hello, world!</title>
+      </head>
+      <body>
+        <h1>Hello, world!</h1>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        -->
+      </body>
+    </html>
+  ```
+
+### 6.3. Web Design 101 - Wireframing
+
+- Wireframing -> settle all design before coding it(using sketch).
+- markup -> high fidelity representation of design. what you see is what you end up getting(using photoshop).
+- prototyppe -> animated version of website.
+
+### 6.4. The Bootstrap Navigation Bar
+
+- [Documentation](https://getbootstrap.com/docs/4.5/components/navbar/)
+
+### 6.5. Bootstrap Grid Layout System
+
+- [Documntaion](https://getbootstrap.com/docs/4.5/layout/grid/)
+
+### 6.6. A Note About CSS Link Order
+
+- CSS code is executed from bottom to top so the order of your code matters
+- Unlike CSS and JavaScript, HTML code is executed from top to bottom so the order of your code matters.
+
+### 6.7. Bootstrap Containers
+
+- all content goes inside container.
+- container-fluid -> takes 100% width of the screen.
+
+### 6.8. Bootstrap Buttons & Font Awesome
+
+- [Buttons Documentation](https://getbootstrap.com/docs/4.5/components/buttons/).
+- link fontAwesome library to our website.
+- [fontAwesome](https://fontawesome.com/).
 
 </details>
