@@ -428,3 +428,51 @@ selector:pseudo-class {
 - [fontAwesome](https://fontawesome.com/).
 
 </details>
+
+## Section 07:
+
+<details>
+  <summary>Intermediate Bootstrap</summary>
+  
+  ### 7.1. The Bootstrap Carousel
+  -	slideshow.
+  -	set carousel options by adding data-option="value".
+  -	[Documentation](https://getbootstrap.com/docs/4.5/components/carousel/).
+  -	aria-hidden="true" -> to be hidden from screen reader.
+  -	class="sr-only" -> to screen reader only.
+  ### 7.2. The Bootstrap Cards
+  -	[Documentation](https://getbootstrap.com/docs/4.5/components/card/).
+  ### 7.3. The CSS Z-Index and Stacking Order
+  -	Each element has x, y and z aixs.
+  -	the default z-index for all elements is 0.
+  -	-1 -> shows the element behind everything.
+  -	z-index only work when element has position fixed, absolute and relative.
+  -	static position doesn't make z-index work.
+
+### 7.4. Media Query Breakpoints
+
+- Make website responsive by media query.
+- @media < type > ( feature )
+- there is many types of media like print, speach, screen.
+
+### 7.5. How to become a Better Programmer
+
+- Code Refactoring:
+  - Readablity -> easy to understand not just for urself but to your future self, and for others.
+  - Modularity -> how easy to use bets of code.
+  - Efficiency -> how fast does your code run.
+  - length.
+
+### 7.6. Advanced CSS - Combining Selectors
+
+- selector1, selector2 { sharedProperty }
+- Hierarchical Selectors -> selector1(parent) selector2(child){propertyAppiedToChild}
+- Combined Selectors -> selector1.selctor2{ProprtyToTheSameElement}
+
+### 7.7. Advanced CSS - Selector Priority
+
+- the last css role has priorety over everything above it.
+- class is more specific than html selector, So it has high priorty.
+- id has the highest priorty than class and html.
+
+</details>
