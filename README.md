@@ -8,7 +8,7 @@
 
 - [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/).
 
-## Section 1:
+## Section 01:
 
 <details>
   <summary>Front-End Web Development</summary>
@@ -31,7 +31,7 @@
 
 </details>
 
-## Section 2:
+## Section 02:
 
 <details>
   <summary>Introduction to HTML</summary>
@@ -113,7 +113,7 @@
 
 </details>
 
-## Section 3:
+## Section 03:
 
 <details>
   <summary>Intermediate HTML</summary>
@@ -161,7 +161,7 @@
 
 </details>
 
-## Section 4:
+## Section 04:
 
 <details>
   <summary>Introduction to CSS</summary>
@@ -268,7 +268,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 5:
+## Section 05:
 
 <details>
   <summary>Intermediate CSS</summary>
@@ -346,7 +346,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 6:
+## Section 06:
 
 <details>
   <summary>Introduction to Bootstrap</summary>
