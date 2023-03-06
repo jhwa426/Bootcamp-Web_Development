@@ -1,12 +1,51 @@
 # The Complete 2023 Web Development Bootcamp
 
+<!-- Icon sections -->
+
 [![HTML5](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)](https://html.com/)
 [![CSS3](https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge&logo=css3)](https://www.free-css.com/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=for-the-badge&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)](https://www.javascript.com/)
 [![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=ffffff)](https://git-scm.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)](http://expressjs.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Shell Script](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.shellscript.sh/)
 
-- [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/).
+<br>
+
+<!-- Course resources section -->
+
+## [Course resourses](https://www.appbrewery.co/p/web-development-course-resources/)
+
+- Course details
+  <details>
+    <summary> What you'll learn :</summary>
+
+  - Build 16 web development projects for your portfolio, ready to apply for junior developer jobs.
+  - After the course you will be able to build ANY website you want.
+  - Work as a freelance web developer.
+  - Master backend development with Node
+  - Learn the latest technologies, including Javascript, React, Node and even Web3 development.
+  - Build fully-fledged websites and web apps for your startup or business.
+  - Master frontend development with React
+  - Learn professional developer best practices.
+    <details>
+
+      <summary> Course includes :</summary>
+
+  - 65 hours on-demand video
+  - 49 downloadable resources
+  - 86 articles
+  - 14 coding exercise projects
+
+  </details>
+
+</details>
+
+<br>
+<!-- Course sections -->
 
 ## Section 01:
 
@@ -474,5 +513,390 @@ selector:pseudo-class {
 - the last css role has priorety over everything above it.
 - class is more specific than html selector, So it has high priorty.
 - id has the highest priorty than class and html.
+
+</details>
+
+## Section 8:
+
+<details>
+  <summary>Web Design School - Create a Website that People Love</summary>
+
+### 8.1. Introduction to web Design
+
+- Users take milliseconds to judge the product through it's design.
+- Design is the cheapest way to make product look expensive.
+
+### 8.2. principles of design - 1. Color Theory
+
+- principles of design:
+- color theory -> Every main color have a mood.
+  1. Red -> love, energy, intensity.
+  2. Yellow -> Joy, intellect, attention
+  3. Green -> freshness, safty, growth.
+  4. Blue -> stability, trust, serenity.
+  5. Purble -> Royality, wealth, feminity.
+- what msg I wanna give to User?
+- colorbullet.
+
+### 8.3. principles of design - 2. Typography
+
+- like colors, fonts have different moods.
+- serif family -> traditional, stable, respectable.
+- use only 2 fonts to one design.
+
+### 8.4. principles of design - 2. User Interface
+
+1. hierarchy:
+
+   - eyes look at big items first.
+   - color can make eyes look at the item directly.
+
+2. layout :
+
+   - different size, image, shape .
+   - lenght of each line of text doesn't be too short or too long.
+
+3. Alignment:
+
+   - Position items on website relative to each other.
+   - reduce the number of aligments
+
+4. white space (space around elements):
+
+   - By adding more space around the element it makes design more minimilize and more elevated.
+
+5. Audience:
+
+   - Think about the audience and what important for them.
+   - flexibility important for design.
+
+### 8.5. principles of design - 3. User Experience
+
+1. simplicity.
+2. Consistency:
+
+   - but also keep the functionality.
+   - make it simple to use, not make user learn how to use.
+
+3. Reading Patterns
+4. All platform design
+
+   - Responsive is very important.
+   - Not take much scroll to know what is going on in the website.
+   - Not make much warning messages.
+
+5. **Don't use Your Powers For Evil**
+
+   - Don't make user make actions that he don't neccessarly do this.
+     Ex. make btn that buy for something colored to buy more than the main buying btn.
+   - Help user to do what they want to do.
+
+### 8.6. practise
+
+- [Hotel page for practise](https://www.canva.com/design/DAELSe8JfD4/3vIsqI3kACNKsbFqYu-9lQ/view?utm_content=DAELSe8JfD4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1).
+
+</details>
+
+## Section 9:
+
+<details>
+  <summary>Introduction to Javascript</summary>
+
+### 9.1. Introduction to Javascript
+
+- It also known [EcmaScript](https://en.wikipedia.org/wiki/ECMAScript).
+- java vs javaScript is like car vs carprt.
+-     js id interpreted programming language, java is compiled programming language.
+- It started as front-end language to make animation.
+
+### 9.2. Javascript Alerts - Adding Behaviour
+
+- Google chrome provide developer tool console to write line by line js code.
+- using source tap inside console tap to write multiple lines of js code.
+- source -> snippts -> new snippt (file.js);
+
+```
+  alert('Message to be alerted.');
+  //keyword("")end
+```
+
+### 9.3. Data Types
+
+- String -> everything inside "" or ''.
+- Numbers.
+- Boolean -> true or false.
+- typeof(variable) -> tells the type of the variable.
+
+### 9.4. Variables
+
+- prompt('msg') -> allows user to write input.
+- var name = value -> to define variable.
+
+### 9.5. Naming and Naming Conventions
+
+- naming variables using camelCase.
+- always give meaning names to variables.
+- variables name can't be a keyword.
+- variables name can't begin with numbers but it can contain number.
+- variables name can't contain Spaces.
+- numbers, characters, \_ , $ are the only simpoles that valid.
+
+### 9.6. String Concatenation
+
+- concat two or more strings using + -> Str1 + str2 = srt1str2.
+
+### 9.7. String Lengths
+
+- str.length -> returns the numbers of str characters.
+
+### 9.8. Slicing and Extracting Parts of a String
+
+- programmers always count from 0.
+- slice(startindex, endIndex) -> Starting from StartIndex untill but not incloding endIndex and returns that new str.
+
+```
+  var tweet = prompt("Msg limited to 140 char.")
+  var sliceTweet = tweet.slice(0, 140)
+  alert("You tweeted: " + sliceTweet)
+```
+
+### 9.9. Changing Casing in Text
+
+- str.toUpperCase() -> all characters to upperCase.
+- str.toLowerCase() -> all characters to lowerCase.
+
+```
+  var name = prompt("Enter Name")
+  var fLetter = name.slice(0, 1);
+  var restOfLetters = name.slice(1, name.length);
+  alert("Your name is: " + fLetter.toUpperCase() + restOfLetters.toLowerCase())
+```
+
+### 9.10. Basic Arithmetic and the Modulo Operator in Javascript
+
+- Modulo -> gives the remainer of the division (num % num).
+- Modulo checkes if a number is fully divisible by another number.
+
+### 9.11. Increment and Decrement
+
+- var x = 1 ; x = x + 1; -> Equals x++ ->Equals x += x
+- var x = xNum; var y = yNum -> x += y // adding y to x
+- += , -=, \*=, /= all works the same.
+
+### 9.12. Functions Part 1: Creating and Calling Functions
+
+- Functions -> is package reapeted code into {} and giving it a name.
+- all that blocked code will be exicuted when you call that function.
+- creating a function -> function funcName(){//package of code}
+- calling function -> funcName();.
+
+### 9.13. Functions Part 2: Parameters and Arguments
+
+- functions take inputs called parameters.
+- It's variable that can be used in this function.
+- Math.floor(number) -> round down Number.
+
+```
+  function lifeInWeeks(age) {
+
+      //Write your code here.
+      var   leftedYears = 90 - age;
+      var   days = leftedYears * 365;
+      var   weeks = leftedYears * 52;
+      var   months = leftedYears * 12;
+      console.log("You have " + days  + " days, " + weeks + " weeks, and " + months + " months left.")
+
+  }
+  lifeInWeeks(25)
+
+```
+
+### 9.14. Functions Part 3: Outputs & Return
+
+- In order to have output from function we have to use return keyword.
+
+</details>
+
+## Section 10:
+
+<details>
+  <summary>Intermediate Javascript</summary>
+
+### 10.1. Random Number Generation in
+
+- Math.random() -> generates random number between 0 and 0.999999999999 it never reachs 1.
+- [Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random).
+- Math.random() \* num -> range of numbers is from 0 to less than (not including) num.
+- Pseudorandom number generators](https://www.youtube.com/watch?v=GtOt7EBNEwQ).
+- Math.floor(Math.random() \* n) +1 -> generates Number between 1 to n.
+
+### 10.2. Control Statements: Using If-Else Conditionals & Logic
+
+- control flow -> controling the flow of code depends on condition.
+
+### 10.3. Comparators and Equality
+
+- Comparators -> compare two different values.
+- ===, ==, <, >, <=, >=, !==, !=.
+- The important difference between === and == is even though === check for equality also checking the type of data type.
+
+### 10.4. Combining Comparators
+
+- AND &&, OR ||, NOT !.
+
+### 10.5. Coding Exercise 5: BMI Calculator
+
+```
+function bmiCalculator (weight, height) {
+
+    var interpretation = weight / (height *2);
+
+    if (interpretation < 18.5)
+
+    {
+
+        return "Your BMI is " + interpretation + ", so you are underweight.";
+
+    }
+
+    else if (interpretation >= 18.5 && interpretation <= 24.9)
+
+    {
+
+        return "Your BMI is " + interpretation + ", so you have a normal weight.";
+
+    }
+
+    else {
+
+        return "Your BMI is " + interpretation + ", so you are overweight.";
+
+    }
+
+    return interpretation;
+
+}
+```
+
+### 10.6. Coding Exercise 6: Leap Year Challenge
+
+```
+function isLeap(year) {
+
+    if (year % 4 === 0 ) {
+        if(year % 100 === 0){
+            if(year % 400 === 0){
+                return "Leap year."
+            }else{
+                return "Not leap year."
+            }
+        }else{
+            return "Leap year."
+        }
+
+    } else {
+        return "Not leap year."
+    }
+
+}
+```
+
+### 10.7. Collections: Working with Javascript
+
+- Arrays -> is a collection of related items that can be stored together into the same variable.
+- var arr = [item1, item2, item3, ....].
+- arr[0] -> returns the fisrt index.
+- arr.length -> the number of array items.
+- arr.includes(item) -> check if this item is exist, it returns true or false.
+
+### 10.8. Adding Elements and Intermediate
+
+- arr.push(value) -> Adding new item at the end of the array.
+- arr.pop() -> Remove the last item of the array.
+- fizzBuzz Game :
+
+```
+var result = [];
+var count = 1;
+function fizzBazz(){
+  while(count <= 100 ){ //while loop
+    if (count % 3 === 0 && count % 5 ===0){
+      result.push("fizzBuzz")
+    }else if(count % 3 === 0){
+      result.push("fizz")
+    }else if (count % 5 === 0){
+      result.push("buzz")
+    }else{
+      result.push(count)
+    }
+    count++;
+  }
+  console.log(result);
+}
+```
+
+- The order of if statements is matter.
+
+### 10.9. Coding Exercise 7: Who's Buying Lunch?
+
+```
+function whosPaying(names) {
+
+    var arrayLength = names.length;
+
+    var randomIndex = Math.floor(Math.random() * arrayLength);
+
+    return names[randomIndex] + " is going to buy lunch today!";
+
+}
+```
+
+### 10.10. Control Statements: While Loops
+
+- To make sequance of data.
+- while(end){//Sequance something ; change}
+- satete -> if something is true.
+- The bad thing about while loop is that it will run the program as long the condition is true, So it might be infinte loop.
+
+```
+  //Bottels Challenge solution
+  var numberOfBottles = 99
+  while (numberOfBottles >= 0) {
+      var bottleWord = "bottle";
+      if (numberOfBottles === 1) {
+    bottleWord = "bottles";
+      }
+      console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+      console.log(numberOfBottles + " " + bottleWord + " of beer,");
+      console.log("Take one down, pass it around,");
+    numberOfBottles--;
+      console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
+```
+
+### 10.11. Control Statements: For Loops
+
+- for(start; end; change){//Sequance something}.
+- iterate -> run a piece of code many times.
+- Fibonacci Callenge
+
+```
+function fibonacciGenerator (n) {
+        var output = [];
+  if(n === 1){
+    output = [0];
+  }else if (n=== 2){
+    output = [0, 1];
+  }else{
+    output = [0, 1];
+    for(var i = 2; i< n; i++){
+      output.push(output[output.length -2] + output[output.length - 1]);
+    }
+  }
+  return output;
+}
+```
+
+- [Challenge flowchart](https://drive.google.com/file/d/1g8vVtqhSj44vcElfc-HK0nMbecteW8Yg/view).
 
 </details>
