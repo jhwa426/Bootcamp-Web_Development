@@ -898,3 +898,58 @@ function fibonacciGenerator (n) {
 - [Challenge flowchart](https://drive.google.com/file/d/1g8vVtqhSj44vcElfc-HK0nMbecteW8Yg/view).
 
 </details>
+
+## [Section 11:](<https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2011%20-%20The%20Document%20Object%20Model%20(DOM)>)
+
+<details>
+  <summary>The Document Object</summary>
+
+### 11.1. Adding Javascript to Websites
+
+- Inline js -> By adding attributes to html elements, EX. onload="jsCode".(Not a good practice).
+- Enternal -> By adding script type="text/javascript" tag to page and write js code inside it.
+- External file -> script tag with src to the external js file.
+- js scripts tag goes at the bottom of code unlike css links.
+
+### 11.2. Object Model (DOM)
+
+- DOM -> Document Object Model.
+- it turns the document into a tree of objects that can be related to each others.
+- [HTML tree Generator Extention](https://chrome.google.com/webstore/detail/html-tree-generator/dlbbmhhaadfnbbdnjalilhdakfmiffeg).
+- Each child enhirets a document object.
+- [firstElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild).
+- [lastElementChild](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/lastElementChild).
+- Objects inside the DOM has properties(describes thomething about object) and methods(the things that object can do).
+- Metod -> is associated to an object.
+
+### 11.3. Selecting HTML Elements with js
+
+- [getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
+- [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
+- [querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll).
+
+### 11.4. Manipulating and Changing Styles
+
+- style property -> to change the css styles.
+- [Css properites in js](https://www.w3schools.com/jsref/dom_obj_style.asp).
+
+### 11.5. The Separation of Concerns: Structure vs Style vs Behaviour
+
+- html file -> to strucure
+- css files -> to style
+- js file -> to behaviour
+- Adding classes using js and style that classes using css.
+- element.classList -> returns the list of classes.
+- element.classList.add("className") -> add class to element.
+
+### 11.6. Text Manipulation and the Text Content
+
+- element.innerHTML -> all child html.
+- element.textContent -> the child text only without html tags.
+
+### 11.7. Manipulating HTML Element Attributes
+
+- [attributes](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes).
+- [setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute), [getAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute), [toggleAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute)
+
+</details>
