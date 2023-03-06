@@ -45,7 +45,7 @@
 <br>
 <!-- Course sections -->
 
-## Section 01:
+## [Section 01:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2001%20-%20Front-End%20Web%20Development)
 
 <details>
   <summary>Front-End Web Development</summary>
@@ -68,7 +68,7 @@
 
 </details>
 
-## Section 02:
+## [Section 02:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2002%20-%20Introduction%20to%20HTML)
 
 <details>
   <summary>Introduction to HTML</summary>
@@ -150,7 +150,7 @@
 
 </details>
 
-## Section 03:
+## [Section 03:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2003%20-%20Intermediate%20HTML)
 
 <details>
   <summary>Intermediate HTML</summary>
@@ -198,7 +198,7 @@
 
 </details>
 
-## Section 04:
+## [Section 04:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2004%20-%20Introduction%20to%20CSS)
 
 <details>
   <summary>Introduction to CSS</summary>
@@ -305,7 +305,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 05:
+## [Section 05:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2005%20-%20Intermediate%20CSS)
 
 <details>
   <summary>Intermediate CSS</summary>
@@ -383,7 +383,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 06:
+## [Section 06:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2006%20-%20Introduction%20to%20Bootstrap)
 
 <details>
   <summary>Introduction to Bootstrap</summary>
@@ -466,7 +466,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 07:
+## [Section 07:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2007%20-%20Intermediate%20to%20Bootstrap)
 
 <details>
   <summary>Intermediate Bootstrap</summary>
@@ -514,7 +514,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 8:
+## [Section 08:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2008%20-%20Web%20Design%20School%20-%20Create%20a%20Website%20that%20People%20Love)
 
 <details>
   <summary>Web Design School - Create a Website that People Love</summary>
@@ -595,7 +595,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 9:
+## [Section 09:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2009%20-%20Javascript)
 
 <details>
   <summary>Introduction to Javascript</summary>
@@ -715,7 +715,7 @@ selector:pseudo-class {
 
 </details>
 
-## Section 10:
+## [Section 10:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2010%20-%20Intermediate%20Javascript)
 
 <details>
   <summary>Intermediate Javascript</summary>
