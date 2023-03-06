@@ -31,18 +31,16 @@
   - Build fully-fledged websites and web apps for your startup or business.
   - Master frontend development with React
   - Learn professional developer best practices.
-    <details>
+  </details>
 
-      <summary> Course includes :</summary>
+  <details> 
+    <summary> Course includes :</summary>
 
   - 65 hours on-demand video
   - 49 downloadable resources
   - 86 articles
   - 14 coding exercise projects
-
   </details>
-
-</details>
 
 <br>
 <!-- Course sections -->
