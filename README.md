@@ -953,3 +953,10 @@ function fibonacciGenerator (n) {
 - [setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute), [getAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute), [toggleAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute)
 
 </details>
+
+## [Section 12:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2012%20-%20%20Boss%20Level%20Challenge%201%20-%20The%20Dicee%20Game)
+
+<details>
+  <summary>Boss Level Challenge 1 - The Dicee Game</summary>
+- Dicee Game project.
+</details>
