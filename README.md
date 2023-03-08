@@ -960,3 +960,66 @@ function fibonacciGenerator (n) {
   <summary>Boss Level Challenge 1 - The Dicee Game</summary>
 - Dicee Game project.
 </details>
+
+## [Section 13:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/JS-and-DOM-manipulation/Section%2013%20-%20Advanced%20Javascript%20and%20DOM%20Manipulation)
+
+<details>
+  <summary>Advanced Javascript and DOM Manipulation</summary>
+
+- Drum kit project.
+
+### 13.1. Adding Event Listeners to a Button
+
+- [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
+
+### 13.2. Higher Order Functions and Passing
+
+- Higher Order Functions -> are functions that takes other functions as inputs or returns function as an output.
+
+### 13.3. A Deeper Understanding of Javascript Objects
+
+- Constructor: A constructor is a function that initializes an object.
+- Constructor functions -> the name has to be capitalized.
+
+```
+  // Create constructor
+  function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  //create objects
+  var myFather = new Person("John", "Doe", 50, "blue");
+  var myMother = new Person("Sally", "Rally", 48, "green");
+```
+
+### 13.4. How to Use Switch Statements in js
+
+- switch takes code into different track depending on differnt value.
+
+### 13.5. Objects, their Methods and the Dot Notaion
+
+- Method is a function that associated with an object.
+- calling methods and ptoperty -> with dot notation.
+
+```
+      var crash = new Audio("./sounds/crash.mp3") //Create object from Audio constructor
+      crash.play() // Use play function from the Audio constructor
+```
+
+### 13.6. Using Keyboard Event Listeners to Check for Key Presses
+
+- using eventListner keydown.
+
+### 13.7. Understanding Callbacks and How to Respond to Events
+
+- Callback function -> is a function that gets passed in as an input.
+- It has to wait something to happens.
+- It triggers the actual event that happens.
+
+### 13.8. Adding Animation to Websites
+
+- Adding class to clicked btn and setTimeout to remove the class
+
+</details>
