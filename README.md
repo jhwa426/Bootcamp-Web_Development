@@ -1024,3 +1024,72 @@ function fibonacciGenerator (n) {
 - Adding class to clicked btn and setTimeout to remove the class
 
 </details>
+
+## [Section 14:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2014%20-%20jQuery)
+
+<details>
+  <summary>jQuery</summary>
+
+### 14.1. What is jQuery?
+
+- jQuery is javascript library that someone wrote it to simplify js code and make it easy to use.
+
+### 14.2. How to Incorporate jQuery into websites
+
+- Download jquery file or use cdn link.
+- include scripts at the end of website or add the code inside ready function to avoid loading js file before loading jquery file.
+
+```
+$( document ).ready(function() {
+  // Handler for .ready() called.
+});
+```
+
+### 14.3. How Minification Works to Reduce File Size
+
+- Minify file removes spaces, comments and new lines to Reduce File Size.
+- [Minifier website](https://www.minifier.org/).
+
+### 14.4. Selecting Elements with jQuery
+
+- Using $('selector').
+
+### 14.5. Manipulating Styles with jQuery
+
+- $('Selector').css('cssProperty', 'value') -> To set the value.
+- $('Selector').css('cssProperty', 'value') -> To get the value.
+- $('Selector').addClass('classname1 className2'), $('Selector').removeClass('classname1 className2').
+- $('Selector').hasClass('className') -> return true or false.
+
+### 14.6. Manipulating Text with jQuery
+
+- $('Selector').text('Text to be added').
+- $('Selector').html('< htmlTag />').
+
+### 14.7. Manipulating Attributes with jQuery
+
+- $('Selector').attr('attName', 'value') -> To set the attr value.
+- $('Selector').attr('attName', 'value') -> To get the attr value.
+- class is also attr.
+
+### 14.8. Adding Event Listeners with jQuery
+
+- $('Selector').eventName(callbackFunction) -> It triggers all element that matches Selector without having to make for loop.
+- $('Selector').on("eventName", callbackFunction).
+
+### 14.9. Adding and Removing Elements with jQuery
+
+- element.before(element) -> creates element before the target element itself(before the opening tag of the selected element).
+- element.prepend(element) -> creates element before the content of target element.
+- element.after(element) -> creates element after the target element itself(after the opening tag of the selected element).
+- element.apend(element) -> creates element after the content of target element.
+- element.remove() -> Removes all selected elements.
+
+### 14.10. Website Animations with jQuery
+
+- element.hide(), element.show(), element.toggle().
+- element.fadeOut(), element.fadeIn(), element.fadeToggle().
+- element.slideUp(), element.slideDown(), element.slideToggle().
+- element.animate({poperty: value}) -> we can only add css roles that a numeric value.
+
+</details>
