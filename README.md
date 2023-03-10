@@ -1100,3 +1100,62 @@ $( document ).ready(function() {
   <summary>Boss Level Challenge 2 - The Simon Game</summary>
 - Dicee Game project.
 </details>
+
+## [Section 16:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2016%20-%20The%20Unix%20Command%20Line)
+
+<details>
+  <summary>The Unix Command Line</summary>
+
+### 16.1. Installing the Hyper Terminal
+
+- [Installing](https://git-scm.com/downloads).
+
+### 16.2. Understanding the Command Line. Long Live the Command Line!
+
+- kernel -> is core of operating system, the actual program that interfaces the hardware.
+- shel -> refers to user interface, for you as a human to be able to interact with kernel and in turn with the hardware of the computer.
+- there is two variants to shell:
+  - grafical user interface shell -> finder to find and access files is an example.
+  - command line interface.
+- Bash-sell -> Bourne again shell.
+- It is a CLI or command line interpretter for the UNIX system.
+- Using cmd bash-shell is easier and faster to do a lot of common things.
+
+- with cmd we have full control and more flexibility.
+
+### 16.3. Command Line Techniques and Directory Navigation
+
+- Open up your hyper termial.
+- ls a -> //shows all files including the hidden files.
+- ls -> stands to list , prints all folders and files in the directory.
+- ~ -> the root folder.
+- cd /directory -> to navigate forwards to another directory.
+- cd ../ -> to navigate backwords outside folder.
+- when typing the first character of folder name and press tab it auto completes the name of directory.
+- cd ~ -> go to the root directory.
+- hit the up button to get the histoy of all commands.
+- ctrl + a -> go to the beginning of line, ctrl + e -> go to the end of line.
+- ctrl + u -> clear entire line.
+
+### 16.4. Creating, Opening, and Removing Files through the Command Line
+
+- **Some command lines:**
+  - mkdir folderName -> //Creates a directory.
+  - cd folderName -> //change directory to the new folder created.
+  - touch fileName.extension -> //creates new file.
+  - start fileName.extension -> to open the file(open for mac).
+  - start -a Atom fileName.extension -> to open the file with Atom application for Example(use open for mac).
+  - rm fileName.extension -> removes the file.
+  - pwd -> show the current folder location (print working directory).
+  - rm \* -> remove all files.
+  - rm -r folderName -> remove folder.
+- [Learn More about hyper terminal](https://www.learnenough.com/command-line-tutorial/basics).
+
+</details>
+
+## [Section 17:]()
+
+<details>
+  <summary>Backend Web Development</summary>
+- Full-stack -> Front-end + Back-end.
+</details>
