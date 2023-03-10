@@ -1,0 +1,15 @@
+1. What is backend development?
+
+    Backend web development may seem elusive at first, as it concerns all the parts of a website you can’t see. While the frontend is more obvious because you see and interact with it.
+
+    A simple way to think about backend development is to see it as the “data access layer”. For any website, you have a database storing all your data. The backend requests this data, sorts it, and sends it to the frontend so it can be visible on the screen.
+
+    Another important side of the backend is keeping your website running smoothly. Have you ever tried to book concert tickets, waiting for the right time, and then the website crashed? The website couldn’t handle the higher than usual amount of traffic, and now you’re out of luck. This problem happened in the backend of the website.
+
+    Here’s some more examples of backend processes:
+
+        processing an incoming web page request
+        running a script to show HTML
+        encrypting and decrypting data
+        handling authentication (i.e. is your login info correct?)
+        managing file uploads and downloads
