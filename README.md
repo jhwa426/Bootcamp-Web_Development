@@ -1093,3 +1093,10 @@ $( document ).ready(function() {
 - element.animate({poperty: value}) -> we can only add css roles that a numeric value.
 
 </details>
+
+## [Section 15:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2015%20-%20Boss%20Level%20Challenge%202%20-%20The%20Simon%20Game)
+
+<details>
+  <summary>Boss Level Challenge 2 - The Simon Game</summary>
+- Dicee Game project.
+</details>
