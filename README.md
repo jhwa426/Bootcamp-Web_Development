@@ -1153,9 +1153,77 @@ $( document ).ready(function() {
 
 </details>
 
-## [Section 17:]()
+## [Section 17:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2017%20-%20Backend%20Web%20Development)
 
 <details>
   <summary>Backend Web Development</summary>
 - Full-stack -> Front-end + Back-end.
+</details>
+
+## [Section 18:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2018%20-%20Node.js)
+
+<details>
+  <summary>Node.js</summary>
+
+### 18.1. What is Node.js?
+
+- Allows us to create backend using javaScript.
+- one language to make frontend and backend.
+- nodejs: allows us to take js out of the browser and it librerates it allowing it to interact directely with the hardware of the computer.
+- Sowe can make full application like descktop applications like atom with node(on our computer).
+- we Can also run nodejs on server.
+- Very fast programming language.
+
+### 18.2. Install Node.js
+
+- [node website](https://nodejs.org/en/).
+
+### 18.3. The Power of the Command Line and How to Use Node
+
+- $ pwd -> //print working directory
+- $ cd -> //change directrory
+- $ls -> //list of directroies and files
+- $mkdir folderName -> //make directrory
+- $touch fileName -> //make file
+- $node file.js -> //usenode to run this file
+
+### 18.4. The Node REPL (Read Evaluation Print Loops)
+
+- Allows you to execute code in bite sized chunks(like console).
+- By installing node we install it's REPL.
+- $node -> //To run node REPL.
+- crtl + c -> get out from any process.
+- $ .exit -> // to exist the REPL(or twice crtl + c ).
+- $ clear -> //clear commands
+
+### 18.5. How to Use the Native Node Modules
+
+- Libraries of code that the node team wrote.
+- var creates variable.
+- const -> can't change the value.
+- [file system module](https://nodejs.org/api/fs.html).
+- In order to use module we have first to require it.
+
+```
+const fs = require('fs');
+```
+
+- Now we can use it in our project.
+
+```
+fs.copyFileSync('source.txt', 'destination.txt'); //copy source file into destination
+```
+
+- [Native moduls and the documentation of how to use it](https://nodejs.org/api/).
+
+### 18.6. The NPM Package Manager and Installing External Node Modules
+
+- NPM -> Node Package Manager for External modules.
+- Bits of reusable code that somebody wrote, and usine npm we can incorporate those packages into your project.
+- When we install node we already install NPM.
+- $npm init -y -> intailize NPM package.json file into the project.
+- Example of npm package
+  - [superheroes ](https://www.npmjs.com/package/superheroes).
+  - [supervillains](https://www.npmjs.com/package/supervillains).
+
 </details>
