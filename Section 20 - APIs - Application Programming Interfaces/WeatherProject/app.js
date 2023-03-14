@@ -10,7 +10,6 @@
 // npm install body-parser
 
 // node express
-const { log } = require('console');
 const express = require('express');
 
 // native node - http
@@ -18,6 +17,7 @@ const https = require("https");
 
 // body-parser
 const bodyParser = require("body-parser");
+
 
 // Server
 const app = express();
