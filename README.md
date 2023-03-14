@@ -1227,3 +1227,163 @@ fs.copyFileSync('source.txt', 'destination.txt'); //copy source file into destin
   - [supervillains](https://www.npmjs.com/package/supervillains).
 
 </details>
+
+## [Section 19:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2019%20-%20Express.js%20with%20Node.js)
+
+<details>
+  <summary>Express.js with Node.js</summary>
+
+### 19.1. What is Express?
+
+- It's a Node framework.
+- Built to make you write less repeatitive code.
+- [Express Documentation](https://expressjs.com/).
+
+### 19.2. Creating Our First Server with Express
+
+- open hyper terminal and Editor.
+
+1. Create new directory for the project $mkdir directory.
+2. cd into directory $ cd directory
+3. inside directrory make new file to start server from it $ touch index.js
+4. initialize npm $ npm init
+5. open project inside atom $ atom . .
+6. install express $ npm install express.
+7. require express:
+
+```
+const express = require('express')
+const app = express()
+
+app.listen(3000, () => {
+  console.log(`App listening at http://localhost:3000`)
+})
+```
+
+8. run server $ node index.js
+
+### 19.. Handling Requests and Responses: the GET Request
+
+- app.get -> define what happens ewhen someone makes a get request to the route on the first parameter.
+- req -> the request that sent to the server.
+- res -> the response that server send.
+
+```
+//Send the browser some information to display
+app.get('/', (req, res) => {
+  res.send('Hello World!') //send text or html <h2>Hello World!</h2>
+})
+```
+
+### 19.3. Nodemon Installation
+
+- a npm package that auto start our servers.
+- Once you install it, it will be available across your all projects.
+- [nodemon](https://github.com/remy/nodemon).
+
+### 19.4. Understanding and Working with Routes
+
+- You can set up as many routes as you wish.
+
+```
+app.get('/contact', (req, res) => {
+  res.send('Contact page')
+})
+app.get('/about', (req, res) => {
+  res.send('About page')
+})
+```
+
+### 19.5. Calculator Setup Challenge
+
+- Make a new folder called Calculator on your Desktop
+- Change Directory to this new folder
+- Inside the Calculator folder, create a new file called calculator.js
+- Set up a new NPM package
+- Open the project folder in Atom
+- Using NPM install the express module
+- Require express in your calculator.js
+- Setup express
+- Create a root route get method with app.get()
+- Send the words Hello World from the root route as the response
+- Spin up our server on port 3000 with app.listen
+- Run server with nodemon
+
+### 19.6. Calculator Setup: Challenge Solution
+
+- $ mkdir Calculator
+- $ cd Calculator
+- $ touch calculator.js
+- $ npm init
+- $ atom .
+- $ npm install express
+
+```
+Starter Code
+```
+
+- $ nodemon calculator.js
+
+### 19.7. Responding to Requests with HTML Files
+
+- make index.html file
+
+```
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html')
+})
+
+```
+
+### 19.8. Processing Post Requests with Body Parser
+
+- Submit button sends the data into the form into the location(route) that at action attribute.
+- [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+- In order to recieve post data from form we need to install package body-parser and require it, then we tell our app to use it.
+
+```
+require('express');
+const bodyparser = require('body-parser')
+
+const app = express()
+app.use(bodyparser.urlencoded({extended : true}))
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html')
+})
+
+app.post('/', function(req, res){
+  console.log(req.body);
+})
+```
+
+- It parses the req into text, so to convert to numder use Number(req.body.num).
+
+### 19.9. BMI Routing Challenge
+
+1. Create a new file called bmiCalculator.html inside the Calculator folder from the last challenge
+2. Add the HTML boilerplate and set the page title to BMI Calculator
+3. Add an HTML form, this form will make a post request to our server at the route /bmicalculator. The form will have 2 inputs, weight and height with placeholder text that tell the user what they should type into which text box.
+4. Add a button which says “Caculate BMI”
+5. Add the get and post methods for the /bmicalculator route into the same server.js file we've been using
+6. Use sendFile() to send the bmiCalculator.html page as a response inside the get method.
+7. Add an h1 that says BMI Calculator
+8. Inside server.js , create 2 variables, one for weight and one for height.
+9. Use the BMI calculator code you wrote previously, or write some new code to calculate and send back the result as text. It should read something like "Your BMI is n" where n is equal to the calculated BMI based on their weight and height inputs.
+
+### 19.10. Solution to the BMI Routing Challenge
+
+```
+app.get('/bmicalculator', function(req, res){
+  res.sendFile(__dirname + '/bmiCalculator.html')
+})
+app.post('/bmicalculator', function(req, res){
+  var weight = parseFloat(req.body.weight);
+  var height = parseFloat(req.body.height);
+  var bmi = weight / (height * height)
+
+  res.send("Your BMI is "+ bmi )
+})
+```
+
+</details>
