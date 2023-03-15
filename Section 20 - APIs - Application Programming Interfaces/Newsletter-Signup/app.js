@@ -104,7 +104,7 @@ app.post("/failure", function(req, res) {
 
 
 // Default listen - The server.listen() method creates a listener on the specified port or path.
-app.listen(process.env.PORT || 3000, function() {
+app.listen(3000, function() {
     console.log("Server is running on port 3000");
 })
 
