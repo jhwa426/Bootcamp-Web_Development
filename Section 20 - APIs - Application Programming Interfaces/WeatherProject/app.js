@@ -2,12 +2,12 @@
 
 // npm init
 // npm install express
-// node app.js
 
 // npm install -g nodemon
-// nodemon calculator.js
 
-// npm install body-parser
+// node app.js
+// nodemon app.js
+
 
 // node express
 const express = require('express');
@@ -19,7 +19,7 @@ const https = require("https");
 const bodyParser = require("body-parser");
 
 
-// Server
+// Server setup
 const app = express();
 const port = 3000;
 
