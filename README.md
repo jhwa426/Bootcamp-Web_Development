@@ -1387,3 +1387,243 @@ app.post('/bmicalculator', function(req, res){
 ```
 
 </details>
+
+## [Section 20:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2020%20-%20APIs%20-%20Application%20Programming%20Interfaces)
+
+<details>
+  <summary>APIs - Application Programming Interfaces</summary>
+
+### 20.1. Why Do We Need APIs?
+
+- Application Programming Interfaces: is a set of command, functions, protocol and objects that prorammers can use to create software or interact with external system.
+
+### 20.2. API Endpoints, Paths and Parameters.
+
+- Endpoint: Every API that interacts with external server has endpoint "The url of the get request".
+- Path: the word after the last (/) in the endpoint url.
+- Parameters: the words at the end of url after (?) in the endpoint url
+  - consists of ?key=value, the first parameter after (?) and the rest of parameters sfter (&).
+  - The order of parameters dosen't matter.
+- [kanye API](https://kanye.rest/).
+- [Joke API](https://sv443.net/jokeapi/v2/).
+
+### 20.3. API Authentication and Postman
+
+- Authentication: Every time you make a request through the API, they have to be able to identify you as a developer and they have to keep track how often you use this API to get data, then charge you or limit you accordingly.
+- [weather API](https://openweathermap.org/api).
+- sign up and sign in.
+- API key and create a key.
+- when we testing APIs we use [Postman](https://www.postman.com/downloads/).
+
+### 20.4. What is JSON?
+
+- Stands for Javascript Object Notation.
+- It's not the only data that can receive data from APIs.
+- [JSON vs XML](https://www.w3schools.com/js/js_json_xml.asp).
+- [chrome extention JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc).
+- [The Rise and Rise of JSON](https://twobithistory.org/2017/09/21/the-rise-and-rise-of-json.html).
+
+### 20.5. Making GET Requests with the Node HTTPS Module
+
+- [Ways To make get request](https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html).
+- Use native httpRequest Module.
+- Require it but you don't need to insall it.
+- [HTTPS](https://nodejs.org/api/https.html#https_https_get_url_options_callback).
+
+```
+app.get('/', function(req, res){
+  //url parts
+  const query = 'london';
+  const  apiKey = '3b712ebc109bc87b541a0abaa0f64b85';
+  const unit = 'metric';
+  //request from our Server to external server 'API'
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=${unit}`;
+  https.get(url, function(response){
+    console.log((response));
+  })
+
+})
+```
+
+### 20.6. How to Parse JSON
+
+- [All response.statusCode](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+- [statusCode for fun :)](https://httpstatusdogs.com/).
+- JSON.parse(jsonData) -> convert data to Object.
+- JSON.stringfy(objectData) -> convert Object to Json.
+
+```
+app.get('/', function(req, res){
+  https.get(url, function(response){
+    //response from external Server to our server
+    response.on('data', function(data){
+      console.log(data);
+      const weatherData = JSON.parse(data);
+      const temp = weatherData.main.temp;
+      const weatherDescription = weatherData.weather[0].description
+    })
+  })
+})
+```
+
+- [Hex to Text](https://cryptii.com/pipes/hex-to-text).
+
+### 20.7. Using Express to Render a Website with Live API Data
+
+- Only one res.send() is allowed in the same request.
+
+```
+//request from client to our server
+app.get('/', function(req, res){
+  //request from our Server to external server 'API'
+  https.get(url, function(response){
+    //response from external Server to our server with data
+    response.on('data', function(data){
+      const icon = weatherData.weather[0].icon;
+      const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+      console.log(weatherData + temp + weatherDescription + icon + iconUrl);
+
+      //response from our server to client server
+      res.write(`<p>The weather description is ${weatherDescription}</p>`)
+      res.write(`<h1>The Tempereture in ${query} is ${temp} in Celcuis Degrees. </h1>`)
+      res.write(`<img src="${iconUrl}" />`)
+      res.send()
+    })
+  })
+})
+```
+
+### 20.8. Using Body Parser to Parse POST Requests to the Server
+
+- create form to send city name from input.
+- recieve that input data by body-parser module.
+
+```
+app.get('/', function(req, res){
+  //url parts
+  const query = req.body.cityName;
+})
+```
+
+### 20.9. The Mailchimp API - What You'll Make
+
+- Make Real website on web.
+
+### 20.10. Setting Up the Sign Up Page
+
+- Setting new project using node and express.
+- $touch file1 file2 file3-> we can write more than one file with a single space between them.
+- Use bootstrap to make styles and signup.html page.
+- In order to make our server serve css files and imgages folders we need function called static('ourStaticFolder').
+
+```
+const bodyParser = require('body-parser')
+const app = express() //make new instance from express
+app.use(express.static("public"))
+app.use(bodyParser.urlencoded({extends: true}))
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/signup.html')
+});
+
+app.post('/', function(req, res){
+
+  const fName = req.body.fName;
+  const lName = req.body.lName;
+  const email = req.body.email;
+})
+```
+
+- [Mailchimp API Reference](https://mailchimp.com/developer/api/marketing/).
+
+### 20.11. Posting Data to Mailchimp's Servers via their API
+
+- [Mailchimp Getting Started](https://mailchimp.com/developer/guides/marketing-api-conventions/).
+- login to Mailchimp then create API key.
+- [Mailchimp List Documentation](https://mailchimp.com/developer/api/marketing/lists/#post_/lists/-list_id-).
+- Use list id (audiance id) to help Mailchimp to identify the list that you want to put your subscribers on it.
+- To send data using https use https.request() and make it into a variable to send data from the form.
+- url: 'https://<dc>.api.mailchimp.com/3.0/' -> the endpoint and path
+- auth: 'anystring:<YOUR_API_KEY>' -> in https options there is auth.
+
+```
+app.post('/', function(req, res){
+  const data = {
+    members : [
+      {
+        //the value is from the form
+        email_address : email,
+        status: "subscribed",
+        merge_fields: {
+                FNAME: fName,
+                LNAME: lName
+        }
+      }
+    ]
+  }
+  const jsonData = JSON.stringify(data);
+
+  const listId   = "listId"
+  const url      = `https://<dc>.api.mailchimp.com/3.0/lists/${listId}`
+  const options  = {
+    method: 'POST',
+    auth: 'anystring:<YOUR_API_KEY>'
+  }
+  const request = https.request(url, options, function(response){
+
+    response.on('data', function(data){
+      console.log(JSON.parse(data));
+    })
+
+  }); //data recieved from external API
+
+  //data which is sent to an external API from the form
+  request.write(jsonData)
+  request.end()
+});
+```
+
+### 20.12. Adding Success and Failure Pages
+
+```
+const request = https.request(url, options, function(response){
+
+    if(response.statusCode === 200){
+      res.sendFile(__dirname + '/success.html')
+    }else{
+      res.sendFile(__dirname + '/failure.html')
+    }
+
+  });
+//Try Again
+app.post('/failure', function(req, res){
+  res.redirect('/')
+})
+```
+
+### 20.13. Deploying Your Server with Heroku
+
+- [Heroku](https://www.heroku.com/).
+- [Heroku Node.js Documentation](https://devcenter.heroku.com/articles/getting-started-with-nodejs).
+- To make app work locally and on heroku port.
+
+```
+app.listen(process.env.PORT || 3000, function(req, res){
+  console.log('Running at 3000 server.');
+})
+```
+
+- Create a Procfile and declare what command should be executed to start your app inside it:
+
+```
+web: node app.js
+```
+
+- Use git:
+
+1. $ git init
+2. $ git add .
+3. $ git commit -m "Message"
+4. $ heroku create
+5. $ git push heroku master
+
+- To update : use 1, 2, 3, 5 commands.
