@@ -90,11 +90,11 @@ app.post("/", function(req, res)  {
     request.write(jsonData);
     request.end();
 
-})
+});
 
 app.post("/failure", function(req, res) {
     res.redirect("/")
-})
+});
 
 
 
