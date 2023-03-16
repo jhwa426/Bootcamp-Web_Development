@@ -15,7 +15,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 
 // request
-// const request = require("request");
+const request = require("request");
 
 // native node - http
 const https = require("https");
