@@ -15,7 +15,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 
 // request
-// const request = require("request");
+const request = require("request");
 
 // native node - http
 const https = require("https");
@@ -90,11 +90,11 @@ app.post("/", function(req, res)  {
     request.write(jsonData);
     request.end();
 
-})
+});
 
 app.post("/failure", function(req, res) {
     res.redirect("/")
-})
+});
 
 
 
@@ -104,7 +104,7 @@ app.post("/failure", function(req, res) {
 
 
 // Default listen - The server.listen() method creates a listener on the specified port or path.
-app.listen(process.env.PORT || 3000, function() {
+app.listen(3000, function() {
     console.log("Server is running on port 3000");
 })
 
