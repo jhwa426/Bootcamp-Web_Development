@@ -1627,3 +1627,68 @@ web: node app.js
 5. $ git push heroku master
 
 - To update : use 1, 2, 3, 5 commands.
+
+</details>
+
+## [Section 21:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2021%20-%20Git%2C%20Github%20and%20Version%20Control)
+
+<details>
+  <summary>Git, Github and Version Control</summary>
+
+### 21.1. Introduction to Version Control and Git
+
+- Version Control: make you can Roll back to a previous versions of the project.
+
+### 21.2. Version Control Using Git and the Command Line
+
+- [Download Git for Windows and Mac](https://git-scm.com/downloads).
+- $ git init
+- $ git status //To see what currently in staging area.
+- $ git add fileName // add file to the staging area
+- $ git commit -m "Message" // Keep track of what changes you made
+- $ git log // To see what commits you made
+- Working directroy : is the folder where you inialize your Git.
+- Staging area: intermediate area that the changes go there when typing $ git add command.
+- Local directrory: changes go there after $ git commit command(.git file inside the project folder).
+- $ git diff fileName // To see the difference between current file and the last versions.
+- $ git checkout fileName // roll back to the last version
+
+### 21.3. GitHub and Remote Repositories
+
+- Make project repository on github.
+- $ git remote add origin repositoryUrl
+- $ git push -u origin master
+- Master branch: is the main branch of commits.
+- Remote directory: which host our code and host all the changes that made after $ git push command(Github Repository).
+
+### 21.4. Gitignore
+
+- $ git rm --cached -r . // remove all files
+- [Gitignore and the absence of NPM Modules on GitHub Projects](https://github.com/contentful/the-example-app.nodejs).
+
+### 21.5. Cloning
+
+- Is a way to pull down all of the commits and all of the versions of a particular remote repository and store the files inside your working directory.
+- $ git clone repositoryUrl
+
+### 21.6. Branching and Merging
+
+- $ git branch branchName // Creates new branch
+- $ git branch // check out what branches you have and show where you are
+- $ git checkout branchName // To switch to this branch
+- To merge go back to master branch: $ git branch master
+- Then merge: $ git merge branchName.
+- it will open vim to maje merge message(write :q! to exit vim)
+- $ git push -u origin master
+
+### 21.7. Optional Git Challenge
+
+- [Git Challenge](https://learngitbranching.js.org/).
+
+### 21.8. Forking and Pull Requests
+
+- forking: make a copy of the project from remote repository
+- pull: make a request to push changes into the main project remote repository.
+- if the pull request is approved, changes will be merged to the main project.
+
+</details>
