@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <h1> <%= kindOfDay %> </h1>
+
+    <ul>
+        <!-- <% %>  'Scriptlet' tag, for control-flow, no output -->
+        <!-- <%= %> Outputs the value into the template (HTML escaped) -->
+
+
+        <% for (var i = 0; i<newListItems.length; i++) { %>
+            <li> <%= newListItems[i] %> </li>
+        <% } %>
+        
+        
+    </ul>
+
+    <form class= "" action="/" method="POST">
+
+        <input type="text" name="newItem">
+
+        <button type="submit" name="button">Add</button>
+
+    </form>
+    
+
+</body>
+
+</html>
+
+
+
