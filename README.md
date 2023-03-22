@@ -1773,3 +1773,20 @@ web: node app.js
   <summary>Boss Level Challenge 3 - Blog Website</summary>
 -	Project ejs-challenge.
 </details>
+
+## [Section 24:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2024%20-%20Databases)
+
+<details>
+	<summary>Databases</summary>
+
+### Databases Explained: SQL vs. NOSQL
+
+- We need databases to store the data.
+- SQL databases: Stands for Structured Query language.
+- NOSQL databases: Stands for Not Only Structured Query language.
+- Depending on the structure of your data you will want to choose a SQL or a NOSQL database.
+- If you need to store data such as orders, customer details, products thing that have lots of relationships between each other, then you might be better to choose SQL such is MySQL.
+- If you have a website where you have something that's more of a one to many kind of relationships, this much easier to store data using NOSQL such as MongoDB.
+  <img src="https://raw.githubusercontent.com/MaiAbdulhamid/The-Complete-2020-Web-Development-Bootcamp/main/images/DB.png" />
+
+</details>
