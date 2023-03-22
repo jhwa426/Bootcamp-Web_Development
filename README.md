@@ -1693,7 +1693,7 @@ web: node app.js
 
 </details>
 
-## [Section 22:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2022%20-%20EJS)
+## [Section 22:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2022%20-%20EJS/todolist-v1)
 
 <details>
 	<summary>EJS</summary>
@@ -1765,4 +1765,11 @@ web: node app.js
 - `module.exports` is equal to `exports`.
 - [const keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 
+</details>
+
+## [Section 23:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2023%20-%20Boss%20Level%20Challenge%203%20-%20Blog%20Website/ejs-challenge)
+
+<details>
+  <summary>Boss Level Challenge 3 - Blog Website</summary>
+-	Project ejs-challenge.
 </details>
