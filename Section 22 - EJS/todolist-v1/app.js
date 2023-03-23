@@ -14,7 +14,7 @@
 
 const express = require('express');
 const bodyParser = require("body-parser");
-const date = require(__dirname + "/date.js");
+const date = require(__dirname + "/date.js"); // import date.js
 
 const app = express();
 
@@ -104,7 +104,7 @@ app.post('/', function (req, res) {
 
     const item = req.body.newItem; // body-parser method brings " name='newItem' " 
 
-    if (req.body.list === "Work") {
+    if (req.body.list === "Work") { // req.body.list === value=<%= listTitle %>
         workItems.push(item);
         res.redirect("/work");
 
