@@ -73,10 +73,11 @@ app.post('/compose', function (req, res) {
 
 
 
-// --TODD Review again
+// --TODD Review again (This is very important!!!!)
 // dynamic website urls
-app.get("/posts/:postName", function(req, res) { // "/posts/:any direct keyword
-    const requestTitle = _.lowerCase(req.params.postName); // paramas : Route parameters
+
+app.get("/posts/:postName", function(req, res) { // "/posts/: **[any direct keyword]**
+    const requestTitle = _.lowerCase(req.params.postName); // paramas : Route parameters // postName : must be same as :postName
     
     postLists.forEach(function(post) {
         const storedTitle = _.lowerCase(post.title);
