@@ -1791,7 +1791,7 @@ web: node app.js
 
 </details>
 
-## [Section 25:]()
+## [Section 25:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2025%20-%20SQL)
 
 <details>
 	<summary>SQL</summary>
@@ -1886,7 +1886,7 @@ INNER JOIN Customers ON Orders.CustomerID = Customers.id;
 
 </details>
 
-## [Section 26:]()
+## [Section 26:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2026%20-%20MongoDB)
 
 <details>
 	<summary>MongoDB</summary>
