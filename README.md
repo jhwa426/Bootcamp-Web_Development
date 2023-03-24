@@ -1972,6 +1972,8 @@ $ db.propducts.insertOne(
 - The latest version is 7.0.3 but we use 5.3.4 in the courese. Thus, you might need to install `npm install mongoose@5.3.4` insted of `npm install mongoose`
 - If use the latest version, the user may face `MongooseError: Model.insertMany() no longer accepts a callback @7.0.3`
 
+- [Reference from article](https://www.mongodb.com/developer/languages/javascript/mongoose-versus-nodejs-driver/)
+
 ### 27.1. Introduction to Mongoose
 
 - [Mongoose: an alternative to the native MongoDB driver](https://mongoosejs.com/)

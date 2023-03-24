@@ -49,8 +49,21 @@ const person = new Person ({
 
 
 
-
 // Find 
+
+// Find a single Person 
+
+// Person.findOne({}, function (err, post) {
+//     if (err) {
+//     console.log(err);
+//     } else {
+//     console.log(post);
+//     }
+//  });
+
+
+
+// Find specific object 
 
 // Person.find(function(err, p) {
 //     if (err) {
@@ -99,6 +112,8 @@ const personB = new Person ({
     weight: 90,
     occupation: "Student",
 });
+
+
 
 // insertMany takes two parameters such as array(the data wants to be added) and callback function
 
