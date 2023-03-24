@@ -1968,7 +1968,9 @@ $ db.propducts.insertOne(
 
 ### 27.0 Mongoose version reference
 
-- [Reference - Model.find() no longer accepts a callback in Mongoose](https://stackoverflow.com/questions/75655652/model-find-no-longer-accepts-a-callback-in-mongoose)
+- [Reference from stack overflow - Model.find() no longer accepts a callback in Mongoose](https://stackoverflow.com/questions/75655652/model-find-no-longer-accepts-a-callback-in-mongoose)
+- The latest version is 7.0.3 but we use 5.3.4 in the courese. Thus, you might need to install `npm install mongoose@5.3.4` insted of `npm install mongoose`
+- If use the latest version, the user may face `MongooseError: Model.insertMany() no longer accepts a callback @7.0.3`
 
 ### 27.1. Introduction to Mongoose
 
