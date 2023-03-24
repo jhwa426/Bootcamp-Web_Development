@@ -1960,3 +1960,166 @@ $ db.propducts.insertOne(
 - [MongoDB Driver](https://docs.mongodb.com/drivers/)
 
 </details>
+
+## [Section 27:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2027%20-%20Mongoose)
+
+<details>
+	<summary>Mongoose</summary>
+
+### 27.0 Mongoose version reference
+
+- [Reference - Model.find() no longer accepts a callback in Mongoose](https://stackoverflow.com/questions/75655652/model-find-no-longer-accepts-a-callback-in-mongoose)
+
+### 27.1. Introduction to Mongoose
+
+- [Mongoose: an alternative to the native MongoDB driver](https://mongoosejs.com/)
+- `$ mongod` -> To start mongo DB server.
+- `$ mongo` -> To start mongo shell.
+- `$ show dbs` -> shows all existed dbs.
+- `$ use fruitDB` -> switch to fruitDB.
+- `$ db.dropDatabase()` -> drop switched db.
+- `$ npm i mongoose` -> Install mongoose into fruits folder.
+- `$ show collections` -> show db collections.
+- `$ db.fruits.find()` -> show everything inside fruits collection.
+- To create new collection and document:
+
+```
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/fruitsDB', {
+  useNewUrlParser: true
+});
+
+const fruitsSchema = new mongoose.Schema({
+  name:  {
+    type: String,
+    required: true
+  },
+  color: String,
+  rating: {
+    type: Number,
+    min: 0,
+    max: 5
+  }
+})
+
+const Fruit = mongoose.model('Fruit', fruitsSchema)
+const kiwi = new Fruit({
+  name: "Kiwi",
+  color: "Green",
+  rating: 1
+})
+```
+
+- [Mongoose documentation on the Model](https://mongoosejs.com/docs/api.html#Model).
+- To insert documents into db:
+
+```
+Fruit.insertMany([apple, kiwi, banana], function(error){
+    if(error){
+      console.log(error);
+    }else{
+      console.log("Successfully added to DB");
+    }
+})
+```
+
+### 27.2. Reading from Your Database with Mongoose
+
+- To find all documents in specific collection:
+
+```
+Fruit.find(function(error, fruits){
+  if(error){
+    console.log(error);
+  }else{
+    fruits.forEach(fruit => {
+      console.log(fruit.name);
+      mongoose.connection.close() // To close connection without have to press ctrl + c
+    })
+  }
+})
+```
+
+### 27.3. Data Validation with Mongoose
+
+- [Mongoose documentation on data validation](https://mongoosejs.com/docs/validation.html)
+
+```
+const fruitsSchema = new mongoose.Schema({
+  rating: {
+    type: Number,
+    min: 0,
+    max: 5
+  }
+})
+```
+
+### 27.4. Updating and Deleting Data Using Mongoose
+
+- Update and delete One record:
+
+```
+Fruit.updateOne({_id: "5fa0397233b60415cc755db4"}, {name: 'Watermelon'}, function(error, res){
+  if(error){
+    console.log(error);
+  }else{
+    console.log("Successfully Updated");
+  }
+})
+Fruit.deleteOne({_id: "5fa05cfa7cc59f34408b9bb0"}, function(error){
+  if(error){
+    console.log(error);
+  }else{
+    console.log("Successfully Deleted");
+  }
+})
+```
+
+- Delete many records:
+
+```
+Peaple.deleteMany({name: "Mai"}, function(error){
+  if(error){
+    console.log(error);
+  }else{
+    console.log("Successfully Deleted");
+  }
+})
+```
+
+### 27.5. Establishing Relationships and Embedding Documents using Mongoose
+
+-
+
+```
+const fruitsSchema = new mongoose.Schema({
+  name:  {
+    type: String,
+    required: true
+  },
+  color: String,
+  rating: {
+    type: Number,
+    min: 0,
+    max: 5
+  }
+})
+const peopleSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+  favFruits: fruitsSchema
+})
+
+const pineapple = new Fruit({
+  name: "Pineapple",
+  color: "light green",
+  rating: 4
+})
+const person1 = new Peaple({
+  name: "John",
+  age: 30,
+  favFruits: pineapple
+})
+```
+
+</details>
