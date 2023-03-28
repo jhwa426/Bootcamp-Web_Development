@@ -46,6 +46,15 @@ const item3 = new Item ({
 const defaultItems = [item1, item2, item3];
 
 
+// list Schema
+
+const listSchema = {
+    name: String,
+    items: [itemSchema]
+};
+
+const List = mongoose.model("List", listSchema);
+
 
 
 
@@ -54,8 +63,6 @@ const defaultItems = [item1, item2, item3];
 
 
 app.get("/", function (req, res) {
-
-
 
     Item.find({}, function(err, foundItems) {
 
@@ -73,6 +80,35 @@ app.get("/", function (req, res) {
           res.render("list", { listTitle: "Today", newListItems: foundItems });
       }
     });
+});
+
+
+app.get("/:customListName", function(req, res) {
+    const customListName = req.params.customListName;
+
+    List.findOne({name: customListName}, function(err, foundList) {
+        if(!err) {
+            if(!foundList) {
+              // create a new list
+              const list = new List({
+                name: customListName,
+                items: defaultItems
+              });
+        
+              list.save();
+              res.redirect("/" + customListName);
+
+            } else {
+              // Show an existing list
+
+              res.render("list", { listTitle: foundList.name, newListItems: foundList.items });
+            }
+        }
+    });
+
+
+
+
 });
 
   
