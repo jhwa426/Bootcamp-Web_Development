@@ -2127,3 +2127,16 @@ const person1 = new Peaple({
 ```
 
 </details>
+
+## [Section 28: Putting Everything Together](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2028%20-%20Putting%20Everything%20Together/todolist-v2)
+
+<details>
+
+- Update todoList project to connect to Mongodb.
+
+- [Removing items from an array with the MongoDB $pull operator](https://docs.mongodb.com/manual/reference/operator/update/pull/).
+- [MDN on inputs of type "hidden"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/hidden).
+- [Mongoose findByIdAndRemove() method](https://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove).
+- [How to capitalise Strings using Lodash](https://lodash.com/docs/4.17.15#capitalize)
+
+</details>
