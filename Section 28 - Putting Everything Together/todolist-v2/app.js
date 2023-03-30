@@ -18,6 +18,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+
+
 // ------ DB area -----------
 
 
@@ -49,7 +51,7 @@ const item3 = new Item ({
 const defaultItems = [item1, item2, item3];
 
 
-// list Schema
+// list Schema for dynamic route
 
 const listSchema = {
     name: String,
@@ -86,35 +88,36 @@ app.get("/", function (req, res) {
 });
 
 
+
+// dynamic route -- important!!!! that no more use like /about, /work
 app.get("/:customListName", function(req, res) {
     const customListName = _.capitalize(req.params.customListName);
 
     List.findOne({name: customListName}, function(err, foundList) {
         if(!err) {
             if(!foundList) {
+
               // create a new list
               const list = new List({
                 name: customListName,
                 items: defaultItems
               });
-        
+
               list.save();
               res.redirect("/" + customListName);
 
             } else {
-              // Show an existing list
 
+              // Show an existing list
               res.render("list", { listTitle: foundList.name, newListItems: foundList.items });
             }
         }
     });
-
-
-
-
 });
 
-  
+
+
+
 
 app.post("/", function (req, res) {
 
@@ -138,6 +141,9 @@ app.post("/", function (req, res) {
 
 });
 
+
+
+
 // delete route
 app.post("/delete", function (req, res) {
 
@@ -146,28 +152,36 @@ app.post("/delete", function (req, res) {
 
     if (listName === "Today") {
         Item.findByIdAndRemove(checkedItemId, function(err) {
-          if (!err) {
-            console.log("Successfully deleted selected items!");
-            res.redirect("/");
-          }
-      });
-    } else {
-      List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId}}}, function(err, foundList) {
-          if(!err) {
-              res.redirect("/" + listName);
-          }
-      });
-    }
+            if (!err) {
+              console.log("Successfully deleted selected items!");
+              res.redirect("/");
+            }
+        });
+      } else {
+          List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId}}}, function(err, foundList) {
+              if(!err) {
+                  res.redirect("/" + listName);
+              }
+          });
+      }
 
   });
 
+
+
+  // /work
 app.get("/work", function (req, res) {
     res.render("list", { listTitle: "Work List", newListItems: workItems });
 });
 
+
+// /about 
 app.get("/about", function (req, res) {
     res.render("about");
 });
+
+// those two are not using anymore as a dynamic route is created
+
 
 app.listen(3000, function () {
     console.log("Server started on port 3000");
