@@ -2131,6 +2131,7 @@ const person1 = new Peaple({
 ## [Section 28: Putting Everything Together](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2028%20-%20Putting%20Everything%20Together/todolist-v2)
 
 <details>
+  <summary>Putting Everything Together</summary>
 
 - Update todoList project to connect to Mongodb.
 
