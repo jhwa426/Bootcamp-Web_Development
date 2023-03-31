@@ -2141,3 +2141,26 @@ const person1 = new Peaple({
 - [How to capitalise Strings using Lodash](https://lodash.com/docs/4.17.15#capitalize)
 
 </details>
+
+## [Section 29:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2029%20-%20Deploying%20Your%20Web%20Application)
+
+<details>
+	<summary>Deploying Your Web Application</summary>
+
+### 29.1. How to Deploy Web Apps with a Database
+
+- Put the app into internet so that everybody can access it.
+- Heroku host our node application instead our localhost `http://localhost:3000`.
+- Mongodb atlas hosr our database.
+- heroku is able to make requestes to atlas server then get data from it.
+
+### 29.2. How to Setup MongoDB Atlas
+
+- [Mongodb Atlas](https://www.mongodb.com/cloud/atlas).
+
+### 29.3. Deploying an App with a Database to Heroku
+
+- [Deploying an existing application on Heroku](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment).
+- [My app On the internet](https://mighty-cove-05026.herokuapp.com/)
+
+</details>
