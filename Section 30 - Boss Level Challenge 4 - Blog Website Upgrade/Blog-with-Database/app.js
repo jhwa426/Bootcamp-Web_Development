@@ -24,7 +24,7 @@ app.use(express.static("public"));
 // ------ DB area -----------
 
 // Connect db server and create db
-mongoose.connect("mongodb+srv://wodud6359:testbytest@cluster0.upzbgb5.mongodb.net/blogDB", { useNewUrlParser: true }); // create or connect if does not exist, it creates automatically
+mongoose.connect("mongodb+srv://wodud6359:<password>@cluster0.upzbgb5.mongodb.net/blogDB", { useNewUrlParser: true }); // create or connect if does not exist, it creates automatically
 
 // Connect DB server (mongo DB Atlas)
 // Connect to Cluster0
@@ -40,12 +40,6 @@ const postSchema = new mongoose.Schema({
 });
 
 const Post = mongoose.model("Post", postSchema);
-
-
-
-
-
-
 
 // ------ DB area -----------
 
