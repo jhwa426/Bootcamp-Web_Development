@@ -48,20 +48,199 @@ const Article = mongoose.model("Article", articleSchema);
 // ------ DB area -----------
 
 
+
+
+// --------------------------
+
 // RESTfull API
 // - GET(READ), POST(CREATE), PUT(UPDATE), PATCH(UPDATE), DELETE.
 
-// GET(READ)
-app.get("/articles", function (req, res) {
-    // MQL (mongo query language - find)
-    Article.find({}, function (err, foundArticles) {
-        if (!err) {
-            res.send(foundArticles);
-        } else {
-            res.send(err);
-        }
+// CRUD Operation
+// Create : (POST)
+// Read : (GET)
+// Update : (PUT, PATCH)
+// Delete : (DELETE)
+
+// --------------------------
+
+// --------------------------Requests Targetting all articles--------------------------
+// app.route()
+
+app.route("/articles")
+    .get(function (req, res) {
+        Article.find({}, function (err, foundArticles) {
+            if (!err) {
+                res.send(foundArticles);
+            } else {
+                res.send(err);
+            }
+        });
+    })
+
+    .post(function (req, res) {
+        const newArticle = new Article({
+            title: req.body.title,
+            content: req.body.content
+        });
+        newArticle.save(function (err) {
+            if (!err) {
+                res.send("Successfully added a new article");
+            } else {
+                res.send(err);
+            }
+        });
+    })
+
+    .delete(function (req, res) {
+        Article.deleteMany({}, function (err) {
+            if (!err) {
+                res.send("Successfully deleted all articles");
+            } else {
+                res.send(err);
+            }
+        });
     });
-});
+
+// --------------------------Requests Targetting a specific article--------------------------
+
+app.route("/articles/:articleTitle")
+    .get(function (req, res) {
+        Article.findOne({ title: req.params.articleTitle }, function (req, foundArticle) {
+            if (foundArticle) {
+                res.send(foundArticle);
+            } else {
+                res.send("No articles matching that title was found");
+            }
+        });
+    })
+
+    .put(function (req, res) { // all items in object will be updated
+        Article.update(
+            { title: req.params.articleTitle },
+            { title: req.body.title, content: req.body.content },
+            { overwrite: true },
+            function (err) {
+                if (!err) {
+                    res.send("Successfully updated an article");
+                } else {
+                    res.send(err);
+                }
+            }
+        );
+    })
+
+    .patch(function (req, res) { // only selected object will be updated
+        Article.update(
+            { title: req.params.articleTitle },
+            { $set: req.body },
+            function (err) {
+                if (!err) {
+                    res.send("Successfully updated an article");
+                } else {
+                    req.send(err);
+                }
+            }
+        );
+    })
+
+    .delete(function (req, res) {
+        Article.deleteOne(
+            { title: req.params.articleTitle },
+            function (err) {
+                if (!err) {
+                    res.send("Successfully deleted an article");
+                } else {
+                    res.send(err);
+                }
+            }
+        );
+    });
+
+
+
+
+
+
+
+
+
+
+// refactored a single route
+
+// GET(READ)
+// app.get("/articles", function (req, res) {
+//     // MQL (mongo query language - find)
+//     Article.find({}, function (err, foundArticles) {
+//         if (!err) {
+//             res.send(foundArticles);
+//         } else {
+//             res.send(err);
+//         }
+//     });
+// });
+
+
+
+
+// POST(CREATE)
+// app.post("/articles", function (req, res) {
+//     const newArticle = new Article({
+//         title: req.body.title,
+//         content: req.body.content
+//     });
+//     newArticle.save(function (err) {
+//         if (!err) {
+//             res.send("Successfully added a new article");
+//         } else {
+//             res.send(err);
+//         }
+//     });
+// });
+
+
+
+
+// DELETE
+// app.delete("/articles", function (req, res) {
+//     Article.deleteMany({}, function (err) {
+//         if (!err) {
+//             res.send("Successfully deleted all articles");
+//         } else {
+//             res.send(err);
+//         }
+//     });
+// });
+
+
+// app.route()
+// You can create chainable route handlers for a route path by using app.route(). 
+// Because the path is specified at a single location, creating modular routes is helpful, as is reducing redundancy and typos. 
+// For more information about routes, see: Router()
+
+// EX
+
+// app.route('/book')
+//     .get((req, res) => {
+//         res.send('Get a random book')
+//     })
+//     .post((req, res) => {
+//         res.send('Add a book')
+//     })
+//     .put((req, res) => {
+//         res.send('Update the book')
+//     })
+
+
+
+
+
+
+
+// PUT(UPDATE), PATCH(UPDATE)
+
+
+
+
 
 
 
