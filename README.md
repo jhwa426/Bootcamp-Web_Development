@@ -2171,3 +2171,176 @@ const person1 = new Peaple({
   <summary>Boss Level Challenge 4 - Blog Website Upgrade</summary>
 - Update Blog project to connect to Mongodb.
 </details>
+
+## [Section 31:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2031%20-%20Build%20Your%20Own%20RESTful%20API%20from%20Scratch/Wiki-API)
+
+<details>
+	<summary>Build Your Own RESTful API From Scratch</summary>
+
+### 31.1. What is REST?
+
+- REST stands for Representational State Transfer
+- REST is the underlying architectural principle of the web. The amazing thing about the web is the fact that clients (browsers) and servers can interact in complex ways without the client knowing anything beforehand about the server and the resources it hosts. The key constraint is that the server and client must both agree on the media used, which in the case of the web is HTML.
+- GET(READ), POST(CREATE), PUT(UPDATE), PATCH(UPDATE), DELETE.
+- PATCH: sending a piece of data that needs to be updated, instead of the entire entery.
+- We use different routes in order to access certain resources.
+
+### 31.2. Creating a Database with Robo 3T
+
+- [Robo 3T Github](https://github.com/Studio3T/robomongo)
+- [Official website](https://robomongo.org/).
+- make db collection and add some articles to it.
+
+### 31.3. Set Up Server
+
+- `$ mkdir wiki-Api` -> Make a new folder called `wiki-Api` on your Desktop
+- `$ cd wiki-Api ` -> Change Directory to this new folder
+- `$ touch app.js ` -> Inside the `wiki-Api` folder, create a new file called `app.js`
+- `$ npm init -y` -> create `package.json` file.
+- `$ npm i express ejs body-parser mongoose` -> Set up a new NPM packages.
+- `$ Atom .` -> Open the project folder in Atom
+- `$ nodemon app.js` -> Run server with nodemon
+- Set starting code:
+
+```
+const express    = require('express');
+const ejs        = require('ejs');
+const bodyParser = require('body-parser');
+const mongoose   = require('mongoose');
+
+const app        = express();
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.static("public"));
+
+//Connect to mongoose db
+mongoose.connect('mongodb://localhost:27017/wikiDB', {useNewUrlParser: true});
+
+const articleSchema = new mongoose.Schema({
+  title: String,
+  content: String
+})
+
+const Article = mongoose.model('Article', articleSchema)
+
+app.listen(3000, function() {
+  console.log("Server started on port 3000");
+});
+```
+
+### 31.3. GET All Articlesmongoose
+
+- Get all articles:
+
+```
+app.get('/articles', function(req, res){
+  Article.find({}, function(error, foundArticles){
+    if(error){
+      res.send(error);
+    }else{
+      res.send(foundArticles);
+    }
+  });
+})
+```
+
+### 31.4. POST a New Article
+
+- Use [postman](https://www.postman.com/) to post and test data without need to frontend form.
+
+```
+app.post('/articles', function(req, res){
+  const article = new Article({
+    title: req.body.title,
+    content: req.body.content
+  })
+
+  article.save(function(error){
+    if(error){
+      res.send(error)
+    }else{
+      res.send("Successfully added.")
+    }
+  });
+})
+```
+
+### 31.5. DELTE All Articles
+
+- Delete all articles when make DELETE request with postman:
+
+```
+app.delete('/articles',function(req, res){
+  Article.deleteMany(function(error){
+    if(!error){
+      res.send("Successfully Deleted")
+    }
+  });
+})
+```
+
+### 31.6. Chained Route Handlers Using Express
+
+- [ExpressJS Route Parameters](https://expressjs.com/en/guide/routing.html)
+
+### 31.7. GET a Specific Article
+
+```
+app.route('/articles/:articleTitle')
+.get( function(req, res){
+  const articleTitle = req.params.articleTitle
+  Article.findOne({title: articleTitle}, function(error, foundArticle){
+    if(foundArticle){
+      res.send(foundArticle)
+    }else{
+      res.send("No Mathed article!")
+    }
+  });
+})
+
+```
+
+- localhost:3000/articles/Jack%20Bauer === "Jack Bauer"
+
+### 31.8. PUT a Specific Article
+
+```
+.put(function(req, res){
+  Article.update(
+    {title: req.params.articleTitle},
+    {title: req.body.title, content: req.body.content},
+    {overwrite: true},
+    function(error){
+      if(!error){
+        res.send()
+      }
+    }
+  )
+})
+```
+
+### 31.9. PATCH a Specific Article
+
+```
+.patch(function(req, res){
+  Article.update(
+    {title: req.params.articleTitle},
+    {$set: req.body},
+    function(error){
+      res.send(error || 'Successfully Updates.')
+    }
+  )
+})
+```
+
+### 31.10. DELETE a Specific Article
+
+```
+.delete(function(req, res){
+  Article.deleteOne({title: req.params.articleTitle}, function(error){
+    res.send(error || 'Successfully Deleted Corresponding article.')
+  })
+})
+```
+
+</details>
