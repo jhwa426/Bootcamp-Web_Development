@@ -1,11 +1,17 @@
 // npm init -y
 // npm install express ejs body-parser
 // npm install mongoose@5.3.4
+// npm mongoose-encryption
+// npm install dotenv
+
+// secret key store in dotenv
+require('dotenv').config();
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+const encrypt = require("mongoose-encryption");
 
 const app = express();
 
@@ -34,7 +40,15 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
+// Authentication 
+
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
+
+
 const User = mongoose.model("User", userSchema);
+
+
+
 
 
 // ------ DB area -----------
