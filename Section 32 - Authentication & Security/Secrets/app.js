@@ -3,15 +3,29 @@
 // npm install mongoose@5.3.4
 // npm mongoose-encryption
 // npm install dotenv
+// npm install md5
+// npm install bcryptjs
 
 // secret key store in dotenv
 require('dotenv').config();
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+
+
+// mongoose-encryption
 const encrypt = require("mongoose-encryption");
+
+// JavaScript function for hashing messages -- very strong password hash
+const md5 = require('md5');
+
+// bcrypt password
+const bcrypt = require('bcryptjs');
+
+
 
 const app = express();
 
@@ -40,9 +54,9 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-// Authentication 
+// mongoose-Authentication 
+// userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
 
-userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
 
 
 const User = mongoose.model("User", userSchema);
@@ -70,25 +84,33 @@ app.get("/register", function (req, res) {
 });
 
 
+
+
+
+
 // POST
 app.post("/register", function (req, res) {
-    const newUser = new User({
-        email: req.body.username,
-        password: req.body.password
+    bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
+        const newUser = new User({
+            email: req.body.username,
+            password: hash
+        });
+
+        newUser.save(function (err) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.render("secrets");
+            }
+        });
     });
 
-    newUser.save(function (err) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("secrets");
-        }
-    });
+
 });
 
 app.post("/login", function (req, res) {
     const userName = req.body.username;
-    const password = req.body.password;
+    const password = md5(req.body.password);
 
     User.findOne({ email: userName }, function (err, foundUser) {
         if (err) {
