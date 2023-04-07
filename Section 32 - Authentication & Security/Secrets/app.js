@@ -6,39 +6,44 @@
 // npm install md5
 // npm install bcryptjs
 // npm install passport passport-local passport-local-mongoose express-session
-
+// npm install passport-google-oauth20
+// npm install mongoose-findorcreate
 
 // secret key store in dotenv
-require('dotenv').config();
+require("dotenv").config();
 
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 
 // mongoose-encryption
 const encrypt = require("mongoose-encryption");
 
 // JavaScript function for hashing messages -- very strong password hash
-const md5 = require('md5');
+const md5 = require("md5");
 
 // bcrypt password
-const bcrypt = require('bcryptjs');
+const bcrypt = require("bcryptjs");
 
 // Cookie session
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 
+// passport-google-oauth20
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
+// findOrCreate
+const findOrCreate = require("mongoose-findorcreate");
 
 const app = express();
 
 app.use(express.static("public"));
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -54,6 +59,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+// passport-google-oauth20
+passport.use(new GoogleStrategy({
+    clientID: process.env.Client_ID,
+    clientSecret: process.env.Client_secret,
+    callbackURL: "http://localhost:3000/auth/google/secrets",
+    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+},
+    function (accessToken, refreshToken, profile, cb) {
+        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+            return cb(err, user);
+        });
+    }
+));
 
 
 
@@ -62,7 +80,7 @@ app.use(passport.session());
 
 // Connect local db server
 mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
-mongoose.set('useCreateIndex', true);
+mongoose.set("useCreateIndex", true);
 
 // Connect db server and create db
 // mongoose.connect("mongodb+srv://wodud6359:<password>@cluster0.upzbgb5.mongodb.net/userDB", { useNewUrlParser: true }); // create or connect if does not exist, it creates automatically
@@ -71,7 +89,9 @@ mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
     email: String,
-    password: String
+    password: String,
+    googleId: String,
+    secret: String
 });
 
 // mongoose-Authentication 
@@ -81,13 +101,23 @@ const userSchema = new mongoose.Schema({
 // passport-local-mongoose
 userSchema.plugin(passportLocalMongoose);
 
+//mongoose-findorcreate
+userSchema.plugin(findOrCreate);
+
 const User = mongoose.model("User", userSchema);
 
 
 passport.use(User.createStrategy());
 
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(function (user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function (id, done) {
+    User.findById(id, function (err, user) {
+        done(err, user);
+    });
+});
 
 
 
@@ -107,6 +137,17 @@ app.get("/", function (req, res) {
     res.render("home");
 });
 
+app.get("/auth/google",
+    passport.authenticate("google", { scope: ["profile"] })
+);
+
+app.get("/auth/google/secrets",
+    passport.authenticate("google", { failureRedirect: "/login" }),
+    function (req, res) {
+        // Successful authentication, redirect home.
+        res.redirect("/secrets");
+    });
+
 app.get("/login", function (req, res) {
     res.render("login");
 });
@@ -116,26 +157,33 @@ app.get("/register", function (req, res) {
 });
 
 app.get("/secrets", function (req, res) {
+    User.find({ "secret": { $ne: null } }, function (err, foundUsers) {
+        if (err) {
+            console.log(err);
+        } else {
+            if (foundUsers) {
+                res.render("secrets", { usersWithSecrets: foundUsers });
+            }
+        }
+    });
+});
+
+app.get("/submit", function (req, res) {
     if (req.isAuthenticated) {
-        res.render("secrets");
+        res.render("submit");
     } else {
         res.redirect("/login");
     }
 });
 
-// app.get("/logout", function (req, res) {
-//     req.logout();
-//     res.redirect("/");
-// });
 
-app.post('/logout', function (req, res) {
+app.get("/logout", function (req, res) {
     req.logout(function (err) {
         if (err) {
             console.log(err);
         } else {
-            res.redirect('/');
+            res.redirect("/");
         }
-
     });
 });
 
@@ -143,6 +191,7 @@ app.post('/logout', function (req, res) {
 
 // POST
 app.post("/register", function (req, res) {
+
     User.register({ username: req.body.username }, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
@@ -176,6 +225,26 @@ app.post("/login", function (req, res) {
     })
 });
 
+
+app.post("/submit", function (req, res) {
+    const submittedSecret = req.body.secret;
+
+    //Once the user is authenticated and their session gets saved, their user details are saved to req.user.
+    // console.log(req.user.id);
+
+    User.findById(req.user.id, function (err, foundUser) {
+        if (err) {
+            console.log(err);
+        } else {
+            if (foundUser) {
+                foundUser.secret = submittedSecret;
+                foundUser.save(function () {
+                    res.redirect("/secrets");
+                });
+            }
+        }
+    });
+});
 
 
 // md5 authentication
