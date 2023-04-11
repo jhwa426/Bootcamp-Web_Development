@@ -2599,3 +2599,57 @@ passport.use(new GoogleStrategy({
 - Add `/submit` route to show users secrets on `/secrets` page.
 
 </details>
+
+## [Section 33:](https://github.com/jhwa426/Bootcamp-Web_Development/tree/main/Section%2033%20-%20React.js)
+
+<details>
+	<summary>React.js</summary>
+
+### 33.1. What is React?
+
+- [React](https://reactjs.org/)
+
+### 33.2. What we will make in this React module
+
+- Take a look on projects that we will build.
+
+### 33.3. Introduction to Code Sandbox and the Structure of the Module
+
+- [Codesandbox](https://codesandbox.io/)
+
+### 33.4. Introduction to JSX and Babel
+
+- [Start](https://codesandbox.io/s/introduction-to-jsx-h8ub1?fontsize=14&module=%2Fpublic%2Findex.html%20babeljs.io)
+- [End](https://codesandbox.io/s/introduction-to-jsx-oofqn?fontsize=14)
+
+### 33.5. JSX Code Practice
+
+- [Start](https://codesandbox.io/s/introduction-to-jsx-zp681?fontsize=14)
+- [End](https://codesandbox.io/s/jsx-code-challenge-completed-ot01f?fontsize=14)
+
+### 33.6. Javascript Expressions in JSX & ES6 Template Literals
+
+- [Start](https://codesandbox.io/s/javascript-expressions-in-jsx-llr3w)
+- [End](https://codesandbox.io/s/javascript-expressions-in-jsx-fmhnm?fontsize=14)
+- [Statements vs. Expressions](https://www.youtube.com/watch?v=WVyCrI1cHi8&list=PL-xu4i_QDSxcoDNeh8rx5-pHCCTOg0XsI)
+
+### 33.7. Javascript Expressions in JSX Practice
+
+- [Start](https://codesandbox.io/s/javascript-expressions-in-jsx-completed-1fde0?fontsize=14)
+- [End](https://codesandbox.io/s/javascript-expressions-in-jsx-practice-71uik?fontsize=14)
+
+### 33.8. JSX Attributes & Styling React Elements
+
+- [Start](https://codesandbox.io/s/javascript-expressions-in-jsx-practice-completed-ekgvl?fontsize=14)
+- [End](https://codesandbox.io/s/jsx-attributes-and-styling-kkycr?fontsize=14)
+- Write any html attribute in the camel Case.
+- [Standard HTML attributes](https://www.w3schools.com/tags/ref_standardattributes.asp)
+- [Lorem Picsum](https://picsum.photos/)
+
+### 33.9. Inline Styling for React Elements
+
+- One reasons to use inline styles is if we want to change style of element based on action.
+- With jsx, The `style` attribute requires value as a javascript Object.
+- Write any css properity in camel case.
+
+</details>
