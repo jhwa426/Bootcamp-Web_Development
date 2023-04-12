@@ -2652,4 +2652,39 @@ passport.use(new GoogleStrategy({
 - With jsx, The `style` attribute requires value as a javascript Object.
 - Write any css properity in camel case.
 
+### 33.10. React Styling Practice
+
+- [Start](https://codesandbox.io/s/inline-styling-in-jsx-completed-zpc72?fontsize=14)
+- [End](https://codesandbox.io/s/react-styling-practice-xpn8u?fontsize=14)
+- [Airbnb Style Guide for React](https://github.com/airbnb/javascript/tree/master/react)
+
+### 33.11. React Components
+
+- [Start](https://www.appbrewery.co/p/web-development-course-resources/)
+- [End](https://codesandbox.io/s/react-components-j66pt?fontsize=14)
+- [Airbnb Style Guide for React](https://github.com/airbnb/javascript/tree/master/react)
+
+### 33.12. React Components Practice
+
+- [Start](https://codesandbox.io/s/react-components-3brog?fontsize=14)
+- [End](https://codesandbox.io/s/react-components-practice-completed-2ksvn?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.13. Javascript ES6 - Import, Export and Modules
+
+- [Start](https://codesandbox.io/s/es6-importexport-modules-2otbz?fontsize=14)
+- [Node require() vs ES6 import/export](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export).
+- [End](https://codesandbox.io/s/es6-importexport-modules-enyxr?fontsize=14)
+
+### 33.14. Javascript ES6 Import, Export and Modules Practice
+
+- [Start](https://codesandbox.io/s/es6-importexport-practice-4j2p9?fontsize=14)
+- [End](https://codesandbox.io/s/es6-importexport-modules-enyxr?fontsize=14)
+
+### 33.15. [Windows]​ Local Environment Setup for React Development
+
+- [Node](https://nodejs.org/en/)
+- [Babel syntax highlighting for code editors](https://babeljs.io/docs/en/editors)
+- [Create a new react app](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Where to get support if you get stuck](https://reactjs.org/community/support.html)
+
 </details>
