@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Prac from './prac';
+import List from './List';
+import Heading from './Heading';
+
 
 // JSX Attributes & Styling React Elements
 const name = "Jeff Hwang";
@@ -19,8 +23,6 @@ const customStyle = {
 
 customStyle.color = "red";
 
-
-// React Styling Practice
 let greeting;
 
 const greetingStyle = {
@@ -37,7 +39,6 @@ if (currentTime < 12) {
     greeting = "Good Night";
     greetingStyle.color = "blue"
 }
-
 
 
 function App() {
@@ -61,9 +62,25 @@ function App() {
                 <p style={customStyle}> Copyright {year}.{month}.{date} </p>
                 <p style={greetingStyle}> {greeting} </p>
 
+                {/* React Components such as"Heading" */}
+                <Heading1 />
+
+                <Prac />
+
+                <List />
+
+                <Heading />
+
+
             </header>
         </div>
     );
 }
 
 export default App;
+
+
+
+function Heading1() {
+    return <h1>My App</h1>;
+}

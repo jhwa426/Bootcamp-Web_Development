@@ -1,21 +1,28 @@
 npx create-react-app "project name"
 
-
 npm start
-    Starts the development server.
+Starts the development server.
 
-  npm run build
-    Bundles the app into static files for production.
+npm run build
+Bundles the app into static files for production.
 
-  npm test
-    Starts the test runner.
+npm test
+Starts the test runner.
 
-  npm run eject
-    Removes this tool and copies build dependencies, configuration files
-    and scripts into the app directory. If you do this, you can’t go back!
+npm run eject
+Removes this tool and copies build dependencies, configuration files
+and scripts into the app directory. If you do this, you can’t go back!
 
 We suggest that you begin by typing:
 
-  cd /d/Jeff/Develop_Jeff/Github/Bootcamp-Web_Development/Section 33 - React.js/Lesson01/my-app (react)
-  
-  npm start
+cd /d/Jeff/Develop_Jeff/Github/Bootcamp-Web_Development/Section 33 - React.js/Lesson01/my-app (react)
+
+npm start
+
+https://goddaehee.tistory.com/296
+
+https://codingapple.com/unit/nodejs-react-integration/
+
+https://velog.io/@autumndr3ams/210802-React-Node.jsexpress-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0
+
+https://baegofda.tistory.com/210
