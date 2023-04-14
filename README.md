@@ -2687,4 +2687,28 @@ passport.use(new GoogleStrategy({
 - [Create a new react app](https://reactjs.org/docs/create-a-new-react-app.html)
 - [Where to get support if you get stuck](https://reactjs.org/community/support.html)
 
+### 33.16. Keeper App Project - Part 1 Challenge
+
+- [Start](https://codesandbox.io/s/keeper-app-part-1-completed-oplw1?fontsize=14)
+
+### 33.17. Keeper App Part 1 Solution
+
+- [End](https://codesandbox.io/s/keeper-app-part-1-starting-l1pp6?fontsize=14)
+
+### 33.18. React Props
+
+- [Start](https://codesandbox.io/s/react-props-8xxq5?fontsize=14)
+- [End](https://codesandbox.io/s/react-props-gslmr?fontsize=14)
+
+### 33.19. React Props Practice
+
+- [Start](https://codesandbox.io/s/react-props-practice-4khpy?fontsize=14)
+- [End](https://codesandbox.io/s/react-props-practice-completed-c6fkx?fontsize=14)
+
+### 33.20. React DevTools
+
+- [Start](https://codesandbox.io/s/react-devtools-dk9gj?fontsize=14)
+- [Chrome React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [End](https://codesandbox.io/s/react-devtools-completed-wku4k?fontsize=14)
+
 </details>
