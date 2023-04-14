@@ -16,6 +16,7 @@ function App() {
                 img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
                 tel="+123 456 789"
                 email="b@beyonce.com"
+                test="Test Area"
             />
 
             <Card

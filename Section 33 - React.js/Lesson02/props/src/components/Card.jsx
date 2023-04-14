@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from './Avatar';
 import Detail from './Detail';
+import Test from './Test';
 
 function Card(props) {
     return (
@@ -14,10 +15,13 @@ function Card(props) {
 
                 <div className="bottom">
                     <Detail
-                        detailInfo={props.tel}
+                        detailInfo={props.tel} // tel -> App.js Card - attribute
                     />
                     <Detail
-                        detailInfo={props.email}
+                        detailInfo={props.email} //email -> App.js Card - attribute
+                    />
+                    <Test
+                        testInfo={props.test} //testInfo that I created in Test.jsx
                     />
                 </div>
 
