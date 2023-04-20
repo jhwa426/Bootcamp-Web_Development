@@ -2711,4 +2711,32 @@ passport.use(new GoogleStrategy({
 - [Chrome React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 - [End](https://codesandbox.io/s/react-devtools-completed-wku4k?fontsize=14)
 
+### 33.21. Mapping Data to Components
+
+- [Start](https://codesandbox.io/s/mapping-components-81wml?fontsize=14)
+- [End](https://codesandbox.io/s/mapping-components-y6z4c?fontsize=14)
+
+### 33.22. Mapping Data to Components​ Practice
+
+- [Start](https://codesandbox.io/s/mapping-components-practice-6fkfr?fontsize=14)
+- [The Description List Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
+- [Emojimeanings.net](https://www.emojimeanings.net/list-smileys-people-whatsapp)
+- [End](https://codesandbox.io/s/mapping-components-practice-37h04?fontsize=14)
+
+### 33.23. Javascript ES6 Map/Filter/Reduce
+
+- [Start](https://codesandbox.io/s/mapping-components-practice-completed-h7sm6?fontsize=14)
+- [End](https://codesandbox.io/s/mapfilterreduce-3sm6u?fontsize=14)
+
+### 33.24. Javascript ES6 Arrow functions
+
+- [Start](https://codesandbox.io/s/es6-arrow-functions-y8jhk?fontsize=14)
+- [Arrow Functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+- [End](https://codesandbox.io/s/es6-arrow-functions-gbtv7?fontsize=14)
+
+### 33.25. Keeper App Project - Part 2
+
+- [Start](https://codesandbox.io/s/keeper-app-part-2-b5w06)
+- [End](https://codesandbox.io/s/keeper-app-part-2-completed-4dr3p?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
