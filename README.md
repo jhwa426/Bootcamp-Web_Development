@@ -2739,4 +2739,19 @@ passport.use(new GoogleStrategy({
 - [Start](https://codesandbox.io/s/keeper-app-part-2-b5w06)
 - [End](https://codesandbox.io/s/keeper-app-part-2-completed-4dr3p?fontsize=14&hidenavigation=1&theme=dark)
 
+### 33.26. React Conditional Rendering with the Ternary Operator & AND Operator
+
+- [Start](https://codesandbox.io/s/conditional-rendering-yfdes?fontsize=14&hidenavigation=1&theme=dark)
+- [Using the Logical && in React](https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator)
+- [End](https://codesandbox.io/s/conditional-rendering-ovu1v?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.27. Conditional Rendering Practice
+
+- [Start](https://codesandbox.io/s/conditional-rendering-uzp9m?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/conditional-rendering-practice-78b21?fontsize=14&hidenavigation=1&theme=dark&file=/src/index.js)
+
+### 33.28. State in React - Declarative vs. Imperative Programming
+
+- [Demo](https://codesandbox.io/s/introduction-to-state-completed-kzfro)
+
 </details>
