@@ -5,10 +5,10 @@ import emojipedia from '../emojipedia';
 function showData(emojiTerm) {
     return (
         <Entry
-            key={emojiTerm.id}
-            emoji={emojiTerm.emoji}
-            name={emojiTerm.name}
-            description={emojiTerm.meaning}
+            key={emojiTerm.id} //key must be set as a default
+            emoji={emojiTerm.emoji} // "emoji" is from Entry component (props.emoji)
+            name={emojiTerm.name} // "name" is from Entry component (props.emoji)
+            description={emojiTerm.meaning} // "description" is from Entry component (props.emoji) || "meaning" is from emojipedia object in array.
         />
     );
 }
@@ -26,10 +26,10 @@ function App() {
             </h1>
 
             <dl className="dictionary">
+                {/* function mapping */}
                 {emojipedia.map(showData)}
 
-
-                {/* arrow function of emojipedia*/}
+                {/* direct arrow function of emojipedia*/}
                 {emojipedia.map(emojiTerm => (
                     <Entry
                         key={emojiTerm.id}
