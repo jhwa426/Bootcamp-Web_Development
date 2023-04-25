@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+
 
 function App() {
-  return (
-    <div className="container">
-      <h1>TIME</h1>
-      <button>Get Time</button>
-    </div>
-  );
+    // TEST AREA
+
+    const [count, setCount] = useState(0);
+
+    function increase() {
+        setCount(count + 1);
+    }
+
+    function decrease() {
+        setCount(count - 1);
+    }
+
+    function reset() {
+        setCount(0);
+    }
+
+    // TEST AREA
+
+    // Time area
+    setInterval(updateTime, 1000); // this is automatically updated time.
+
+    const currentTime = new Date().toLocaleTimeString();
+
+    const [time, setTime] = useState(currentTime);
+
+    function updateTime() {
+        const newTime = new Date().toLocaleTimeString();
+        setTime(newTime);
+    }
+
+    return (
+        <div className="container">
+            <h1>{time}</h1>
+            <button onClick={updateTime}>Get Time</button>
+            <br />
+
+            {/* TEST AREA */}
+            <div className="container-data">
+                <h1>TEST AREA</h1>
+                <h1>{count}</h1>
+                <button onClick={increase}>+</button>
+                <button onClick={decrease}>-</button>
+                <button onClick={reset}>Reset</button>
+            </div>
+            {/* TEST AREA */}
+        </div>
+    );
 }
 
 export default App;
