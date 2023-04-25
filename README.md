@@ -2765,4 +2765,13 @@ passport.use(new GoogleStrategy({
 - [Start](https://codesandbox.io/s/usestate-hook-practice-k0g69?fontsize=14&hidenavigation=1&theme=dark)
 - [End](https://codesandbox.io/s/usestate-hook-practice-completed-t99f4)
 
+### 33.31. Javascript ES6 Object & Array Destructuring
+
+- [Start](https://codesandbox.io/s/es6-destructuring-ide4v?fontsize=14&hidenavigation=1&theme=dark)
+- [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+### 33.32. Javascript ​ES6 Destructuring Challenge Solution
+
+- [End](https://codesandbox.io/s/es6-destructuring-zvjn9?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
