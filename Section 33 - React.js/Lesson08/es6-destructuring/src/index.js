@@ -30,9 +30,10 @@ const { coloursByPopularity: [, teslaTopColour] } = tesla; // , can nth indexing
 const { coloursByPopularity: [hondaTopColour] } = honda;
 
 // Type
-const { type: [teslaType] } = tesla;
+const { type: [, teslaType] } = tesla; // , can nth indexing ----> "Sedan"
 
-const { type: [, hondaType] } = honda; // , can nth indexing
+const { type: [hondaType] } = honda;
+// const { type: [, , hondaType] } = honda; // ----> "Truck"
 
 ReactDOM.render(
     <table>
