@@ -2774,4 +2774,10 @@ passport.use(new GoogleStrategy({
 
 - [End](https://codesandbox.io/s/es6-destructuring-zvjn9?fontsize=14&hidenavigation=1&theme=dark)
 
+### 33.33. Event Handling in React
+
+- [Start](https://codesandbox.io/s/event-handling-in-react-2tltl?fontsize=14&hidenavigation=1&theme=dark)
+- [HTML Event Attributes](https://www.w3schools.com/html/html_attributes.asp)
+- [End](https://codesandbox.io/s/event-handling-in-react-completed-61rti?fontsize=14)
+
 </details>
