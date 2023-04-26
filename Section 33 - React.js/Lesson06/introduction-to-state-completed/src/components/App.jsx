@@ -21,7 +21,7 @@ function App() {
     // </div>
 
     <div>
-      <p style={isDone ? { textDecoration: "line-through" } : null}>Something to do</p>   {/*a ? something true : something false  */}
+      <h1 style={isDone ? { textDecoration: "line-through" } : null}> TEST-Something to do </h1>   {/*a ? something true : something false  */}
 
       <button onClick={strike}>Change to strike through</button>
 
