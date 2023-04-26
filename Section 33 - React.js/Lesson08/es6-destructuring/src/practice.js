@@ -6,7 +6,7 @@ const cars = [
             topSpeed: 150,
             zeroToSixty: 3.2
         },
-        type: ["Sedan", "SUV"]
+        type: ["SUV", "Sedan", "Truck"]
     },
 
     {
@@ -18,7 +18,7 @@ const cars = [
             topSpeed: 140,
             zeroToSixty: 8.5
         },
-        type: ["Sedan", "SUV"]
+        type: ["Sedan", "SUV", "Truck"]
     }
 ];
 

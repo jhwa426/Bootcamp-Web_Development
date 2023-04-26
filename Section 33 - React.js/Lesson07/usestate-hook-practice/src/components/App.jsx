@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; //to handle synchronous components
 
 
 function App() {
-    // TEST AREA
+    // ////////////////////////////////////////////////////////////////////////////// TEST AREA //////////////////////////////////////////////////////////////////////////////
 
+    // 
     const [count, setCount] = useState(0);
+
+    // This was used to be below
+    // const countState = useState(0);
+    // const count = countState[0];
+    // const setCount = countState[1];
 
     function increase() {
         setCount(count + 1);
@@ -18,7 +24,9 @@ function App() {
         setCount(0);
     }
 
-    // TEST AREA
+    ////////////////////////////////////////////////////////////////////////////// TEST AREA //////////////////////////////////////////////////////////////////////////////
+
+
 
     // Time area
     setInterval(updateTime, 1000); // this is automatically updated time.
