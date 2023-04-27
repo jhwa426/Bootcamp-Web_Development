@@ -3,12 +3,13 @@ import React, { useState } from "react";
 function App() {
 
     const [headingText, settingText] = useState("Hello");
-    const [isMouseOver, setMouseOver] = useState(false);
+    const [isMouseOver, setMouseOver] = useState(false); // Boolean can be figured out easily
 
     function handleClick() {
         settingText("Submitted");
     }
 
+    // Mouse Over / Out area
     function handleMouseOver() {
         setMouseOver(true);
     }
@@ -17,6 +18,7 @@ function App() {
         setMouseOver(false)
     }
 
+    // TEST AREA
     function backToMain() {
         settingText("Hello");
     }
