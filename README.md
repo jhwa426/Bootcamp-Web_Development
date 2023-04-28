@@ -2780,4 +2780,15 @@ passport.use(new GoogleStrategy({
 - [HTML Event Attributes](https://www.w3schools.com/html/html_attributes.asp)
 - [End](https://codesandbox.io/s/event-handling-in-react-completed-61rti?fontsize=14)
 
+### 33.34. React Forms
+
+- [Start](https://codesandbox.io/s/react-forms-23oen?fontsize=14)
+- [Controlled Components in Forms](https://reactjs.org/docs/forms.html#controlled-components)
+- [End](https://codesandbox.io/s/react-forms-4vy2h?fontsize=14)
+
+### 33.35. Class Components vs. Functional Components
+
+- [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [Intro to Hooks](https://reactjs.org/docs/hooks-intro.html)
+
 </details>
