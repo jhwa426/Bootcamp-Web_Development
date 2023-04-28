@@ -3,9 +3,9 @@ import ClassComponent from "./ClassComponent";
 import FunctionalComponent from "./FunctionalComponent";
 
 class App extends React.Component {
-  render() {
-    return <ClassComponent />;
-  }
+    render() {
+        return <ClassComponent />;
+    }
 }
 
 export default App;
