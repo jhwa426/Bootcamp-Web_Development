@@ -8,29 +8,19 @@ function App() {
     });
 
     function handleChange(event) {
-        const newValue = event.target.value;
-        const inputName = event.target.name;
-
-        // Destructuring
-        // const { value, name } = event.target;
-
-        // if (inputName === "fName") {
-        //     setFullName({ fName: newValue });
-        // } else if (inputName === "lName") {
-        //     setFullName({ lName: newValue });
-        // }
+        const { value, name } = event.target;
 
         setFullName((previousValue) => {
-            if (inputName === "fName") {
+            if (name === "fName") {
                 return {
-                    fName: newValue,
+                    fName: value,
                     lName: previousValue.lName
                 }
             }
-            else if (inputName === "lName") {
+            else if (name === "lName") {
                 return {
                     fName: previousValue.fName,
-                    lName: newValue
+                    lName: value
                 }
             }
         });
@@ -46,14 +36,14 @@ function App() {
                     name="fName"
                     onChange={handleChange}
                     placeholder="First Name"
-                    value={fullName.fName}
+                // value={fullName.fName}
 
                 />
                 <input
                     name="lName"
                     onChange={handleChange}
                     placeholder="Last Name"
-                    value={fullName.lName}
+                // value={fullName.lName}
 
                 />
 
