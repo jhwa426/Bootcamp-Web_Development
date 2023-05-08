@@ -2791,4 +2791,22 @@ passport.use(new GoogleStrategy({
 - [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 - [Intro to Hooks](https://reactjs.org/docs/hooks-intro.html)
 
+### 33.36. Changing Complex State
+
+- [Start](https://codesandbox.io/s/changing-complex-state-ruz1e?fontsize=14&hidenavigation=1&theme=dark)
+- [Synthetic Events](https://reactjs.org/docs/events.html)
+- Never use the `event` inside state hooks methods, because that react passes a synthatic `event` not a real event.
+- [End](https://codesandbox.io/s/changing-complex-state-3hyn7?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.37. Changing Complex State Practice
+
+- [Start](https://codesandbox.io/s/changing-complex-state-practice-8uqvh?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/changing-complex-state-practice-73221?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.38. Javascript ES6 Spread Operator
+
+- [Start](https://codesandbox.io/s/es6-spread-operator-fuc1n?fontsize=14&hidenavigation=1&theme=dark)
+- [Spread_syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [JS ES6](https://stackoverflow.com/questions/11508463/javascript-set-object-key-by-variable?noredirect=1&lq=1)
+- [End](https://codesandbox.io/s/es6-spread-operator-3w3pp?fontsize=14&hidenavigation=1&theme=dark)
 </details>
