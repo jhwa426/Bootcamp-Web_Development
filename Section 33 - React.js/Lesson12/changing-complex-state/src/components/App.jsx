@@ -8,8 +8,8 @@ function App() {
     });
 
     function handleChange(event) {
-        const newValue = event.target.value;
-        const inputName = event.target.name;
+        const newValue = event.target.value; // whatever I type
+        const inputName = event.target.name; // value={fullName.fName}, value={fullName.lName}
 
         // Destructuring
         // const { value, name } = event.target;
@@ -23,14 +23,14 @@ function App() {
         setFullName((previousValue) => {
             if (inputName === "fName") {
                 return {
-                    fName: newValue,
+                    fName: newValue, // value - Destructuring
                     lName: previousValue.lName
                 }
             }
             else if (inputName === "lName") {
                 return {
                     fName: previousValue.fName,
-                    lName: newValue
+                    lName: newValue // value - Destructuring
                 }
             }
         });
