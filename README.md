@@ -2809,4 +2809,15 @@ passport.use(new GoogleStrategy({
 - [Spread_syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [JS ES6](https://stackoverflow.com/questions/11508463/javascript-set-object-key-by-variable?noredirect=1&lq=1)
 - [End](https://codesandbox.io/s/es6-spread-operator-3w3pp?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.39. Javascript ES6 Spread Operator Practice
+
+- [Start](https://codesandbox.io/s/es6-spread-operator-practice-qjpji?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/es6-spread-operator-practice-ecbsk?fontsize=14&hidenavigation=1&theme=dark)
+
+### 33.40. Managing a Component Tree
+
+- [Start](https://codesandbox.io/s/es6-spread-operator-practice-completed-mm4qj?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/managing-a-component-tree-compeleted-cmb9l?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
