@@ -2820,4 +2820,9 @@ passport.use(new GoogleStrategy({
 - [Start](https://codesandbox.io/s/es6-spread-operator-practice-completed-mm4qj?fontsize=14&hidenavigation=1&theme=dark)
 - [End](https://codesandbox.io/s/managing-a-component-tree-compeleted-cmb9l?fontsize=14&hidenavigation=1&theme=dark)
 
+### 33.41. Managing a Component Tree Practice
+
+- [Start](https://codesandbox.io/s/managing-a-component-tree-practice-2hzdh?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/managing-a-component-tree-practice-oe6y7?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
