@@ -13,7 +13,7 @@ function App() {
         setContact(prevValue => {
             return {
                 ...prevValue,
-                [name]: value // name="fName", name="lName", name="email"
+                [name]: value // name="fName", name="lName", name="email" --> fName: value, lName: prevValue.lName, email: prevValue.email
             }
         });
     }
