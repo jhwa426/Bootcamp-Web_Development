@@ -2825,4 +2825,9 @@ passport.use(new GoogleStrategy({
 - [Start](https://codesandbox.io/s/managing-a-component-tree-practice-2hzdh?fontsize=14&hidenavigation=1&theme=dark)
 - [End](https://codesandbox.io/s/managing-a-component-tree-practice-oe6y7?fontsize=14&hidenavigation=1&theme=dark)
 
+### 33.42. Keeper App Project - Part 3
+
+- [Start](https://codesandbox.io/s/keeper-part-3-starting-v3p0j)
+- [End](https://codesandbox.io/s/keeper-part-3-starting-pogqj?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
