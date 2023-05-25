@@ -2830,4 +2830,9 @@ passport.use(new GoogleStrategy({
 - [Start](https://codesandbox.io/s/keeper-part-3-starting-v3p0j)
 - [End](https://codesandbox.io/s/keeper-part-3-starting-pogqj?fontsize=14&hidenavigation=1&theme=dark)
 
+### 33.43. React Dependencies & Styling the Keeper App
+
+- [Start](https://codesandbox.io/s/keeper-part-3-starting-s13gn?fontsize=14&hidenavigation=1&theme=dark)
+- [End](https://codesandbox.io/s/using-pre-built-react-components-completed-58bxk?fontsize=14&hidenavigation=1&theme=dark)
+
 </details>
