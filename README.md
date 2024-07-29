@@ -1,6 +1,10 @@
 # The Complete 2023 Web Development Bootcamp
 
-<!-- Icon sections -->
+<p>
+Completed an intensive Full-stack Web Development course, gaining proficiency in HTML/CSS/JavaScript/jQuery, NodeJS/ExpressJS, MongoDB, and ReactJS, and successfully built 16 web development projects
+</p>
+
+## Technical Skills 💻
 
 [![HTML5](https://img.shields.io/badge/-HTML5-F05032?style=for-the-badge&logo=html5&logoColor=ffffff)](https://html.com/)
 [![CSS3](https://img.shields.io/badge/-CSS3-007ACC?style=for-the-badge&logo=css3)](https://www.free-css.com/)
