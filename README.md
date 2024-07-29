@@ -1,4 +1,4 @@
-# The Complete 2023 Web Development Bootcamp
+## The Complete 2023 Web Development Bootcamp
 
 <p>
 Completed an intensive Full-stack Web Development course, gaining proficiency in HTML/CSS/JavaScript/jQuery, NodeJS/ExpressJS, MongoDB, and ReactJS, and successfully built 16 web development projects
